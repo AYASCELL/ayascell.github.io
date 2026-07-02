@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AYASCELL | Premium Profile</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <canvas id="starfield-canvas"></canvas>
+    <div class="glass-overlay"></div>
+
+    <header class="main-header glass">
+        <nav class="navbar">
+            <a href="#hero" class="logo-link">
+                <img src="assets/2-Photoroom.png" alt="AYASCELL Logo" class="header-logo-image">
+                <span class="gradient-text header-logo-text glow-text">AYASCELL</span>
+            </a>
+            <div class="menu-toggle" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#hero" class="active"><i class="fas fa-home nav-icon"></i>Ana Sayfa</a></li>
+                <li><a href="#skills"><i class="fas fa-code nav-icon"></i>Yetenekler</a></li>
+                <li><a href="projects.html"><i class="fas fa-folder-open nav-icon"></i>Tüm Projeler</a></li>
+                <li><a href="links.html" class="contact-button neon-btn"><i class="fas fa-link nav-icon"></i>Tüm
+                        Linkler</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- YENİ HERO (Kutu yok, ferah tasarım) -->
+    <section id="hero" class="hero-section">
+        <div class="hero-content">
+            <div class="profile-avatar avatar-glow">
+                <img src="assets/2-Photoroom.png" alt="AYASCELL">
+            </div>
+            <h1 class="gradient-text mega-title">AYASCELL</h1>
+            <h3 class="subtitle type-writer">Full Stack Developer</h3>
+            <p>Kendi halinde kod yazan, iz bırakan dijital deneyimler yaratıyorum. Projeler geliştirtirmeyi seviyorum.
+            </p>
+            <div class="hero-buttons">
+                <a href="#projects" class="link-button outline glow-hover">
+                    <span>Öne Çıkan Projeler <i class="fas fa-rocket"></i></span>
+                </a>
+                <a href="links.html" class="link-button solid gold-gradient">
+                    <span>Tüm Hesaplarım <i class="fas fa-link"></i></span>
+                </a>
+            </div>
+
+            <div class="hero-socials">
+                <!-- Sosyal İkonlar -->
+                <!--<a href="#" target="_blank" class="social-icon youtube-icon"><i class="fab fa-youtube"></i></a>-->
+                <a href="https://github.com/ayascell" target="_blank" class="social-icon github-icon"><i
+                        class="fab fa-github"></i></a>
+                <!--<a href="#" target="_blank" class="social-icon twitter-icon"><i class="fab fa-x-twitter"></i></a>-->
+                <!--<a href="#" target="_blank" class="social-icon linkedin-icon"><i class="fab fa-linkedin-in"></i></a>-->
+            </div>
+        </div>
+    </section>
+
+    <!-- OS Section -->
+    <section id="os-section" class="content-section">
+        <div class="container">
+            <!-- İşletim Sistemleri Bölümü -->
+            <div class="os-section" style="margin-top: 20px;">
+                <div style="text-align: center; margin-bottom: 40px;">
+                    <h3 class="gradient-text glow-text" style="font-size: 2em; margin-bottom: 10px;">Çalışma Ortamım
+                    </h3>
+                    <p style="opacity: 0.8;">Ana bilgisayarımda kullandığım ve hakim olduğum sistemler.</p>
+                </div>
+
+                <!-- Masaüstü & İşletim Sistemi Örnekleri -->
+                <!-- Masaüstü & İşletim Sistemi Örnekleri (Galeri) -->
+                <div class="skill-card glass-card hover-lift premium-border"
+                    style="/*max-width: 800px;*/ margin: 0 auto 60px auto; position: relative; padding: 0; overflow: hidden; border-radius: 24px;">
+
+                    <!-- Sol/Sağ Yön Butonları -->
+                    <button onclick="scrollPrev()"
+                        style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); z-index: 10; width: 45px; height: 45px; border-radius: 50%; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #fff; cursor: pointer; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(5px); transition: background 0.3s;"
+                        onmouseover="this.style.background='rgba(255,255,255,0.2)'"
+                        onmouseout="this.style.background='rgba(255,255,255,0.05)'"><i class="fas fa-chevron-left"
+                            style="font-size: 1.2em;"></i></button>
+
+                    <button onclick="scrollNext()"
+                        style="position: absolute; right: 15px; top: 50%; transform: translateY(-50%); z-index: 10; width: 45px; height: 45px; border-radius: 50%; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #fff; cursor: pointer; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(5px); transition: background 0.3s;"
+                        onmouseover="this.style.background='rgba(255,255,255,0.2)'"
+                        onmouseout="this.style.background='rgba(255,255,255,0.05)'"><i class="fas fa-chevron-right"
+                            style="font-size: 1.2em;"></i></button>
+
+                    <div id="osCarousel" class="os-carousel"
+                        style="display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth;">
+                        <!-- İşletim Sistemi 1 (Arch Linux) -->
+                        <div
+                            style="min-width: 100%; scroll-snap-align: center; display: flex; align-items: center; justify-content: center; gap: 50px; padding: 60px 40px; flex-wrap: wrap;">
+                            <div style="text-align: center; min-width: 200px;">
+                                <i class="devicon-archlinux-plain" style="font-size: 5.5em; color: #1793D1;"></i>
+                                <h4 style="font-size: 1.6em; margin-top: 20px; color: #fff;">Arch Linux</h4>
+                                <p style="opacity: 0.7; font-size: 0.9em; margin-bottom: 0;">Ana Geliştirme Ortamı</p>
+                            </div>
+                            <div style="text-align: center;">
+                                <img src="assets/arch.png" alt="Arch Desktop"
+                                    style="width: 100%; max-width: 550px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                            </div>
+                        </div>
+
+                        <!-- İşletim Sistemi 2 (Windows 11) -->
+                        <div
+                            style="min-width: 100%; scroll-snap-align: center; display: flex; align-items: center; justify-content: center; gap: 50px; padding: 60px 40px; flex-wrap: wrap-reverse;">
+                            <div style="text-align: center;">
+                                <img src="assets/windows.png" alt="Windows Desktop"
+                                    style="width: 100%; max-width: 550px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                            </div>
+                            <div style="text-align: center; min-width: 200px;">
+                                <i class="fab fa-windows" style="font-size: 5.5em; color: #00A4EF;"></i>
+                                <h4 style="font-size: 1.6em; margin-top: 20px; color: #fff;">Windows 10</h4>
+                                <p style="opacity: 0.7; font-size: 0.9em; margin-bottom: 0;">Oyun ve Genel Kullanım</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Carousel Pagination Indicators -->
+                    <div class="carousel-dots"
+                        style="display: flex; justify-content: center; gap: 10px; padding-bottom: 25px;">
+                        <span class="carousel-dot active" onclick="scrollToSlide(0)"
+                            style="width: 25px; height: 6px; border-radius: 3px; background: var(--primary-gold); cursor: pointer; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);"></span>
+                        <span class="carousel-dot" onclick="scrollToSlide(1)"
+                            style="width: 10px; height: 6px; border-radius: 3px; background: rgba(255,255,255,0.2); cursor: pointer; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);"></span>
+                    </div>
+                </div>
+
+                <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                        const carousel = document.getElementById('osCarousel');
+                        const container = carousel.parentElement;
+                        let autoScrollTimer;
+
+                        const startAutoScroll = () => {
+                            clearInterval(autoScrollTimer);
+                            autoScrollTimer = setInterval(() => {
+                                scrollNext();
+                            }, 4000); // Her 4 saniyede bir kaydır
+                        };
+
+                        const resetTimer = () => {
+                            startAutoScroll();
+                        };
+
+                        window.scrollNext = () => {
+                            const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+                            if (carousel.scrollLeft >= maxScroll - 10) {
+                                carousel.scrollTo({ left: 0, behavior: 'smooth' });
+                            } else {
+                                carousel.scrollBy({ left: carousel.clientWidth, behavior: 'smooth' });
+                            }
+                            resetTimer();
+                        };
+
+                        window.scrollPrev = () => {
+                            if (carousel.scrollLeft <= 10) {
+                                const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+                                carousel.scrollTo({ left: maxScroll, behavior: 'smooth' });
+                            } else {
+                                carousel.scrollBy({ left: -carousel.clientWidth, behavior: 'smooth' });
+                            }
+                            resetTimer();
+                        };
+
+                        window.scrollToSlide = (index) => {
+                            carousel.scrollTo({
+                                left: index * carousel.clientWidth,
+                                behavior: 'smooth'
+                            });
+                            resetTimer();
+                        };
+
+                        const updateDots = () => {
+                            const index = Math.round(carousel.scrollLeft / carousel.clientWidth);
+                            const dots = container.querySelectorAll('.carousel-dot');
+                            dots.forEach((dot, i) => {
+                                if (i === index) {
+                                    dot.classList.add('active');
+                                    dot.style.width = '25px';
+                                    dot.style.background = 'var(--primary-gold)';
+                                    dot.style.boxShadow = '0 0 10px rgba(212, 175, 55, 0.5)';
+                                } else {
+                                    dot.classList.remove('active');
+                                    dot.style.width = '10px';
+                                    dot.style.background = 'rgba(255,255,255,0.2)';
+                                    dot.style.boxShadow = 'none';
+                                }
+                            });
+                        };
+
+                        carousel.addEventListener('scroll', updateDots);
+
+                        // Mouse uzerine geldiginde kaymayı durdur, cıktıgında devam et
+                        carousel.addEventListener('mouseenter', () => clearInterval(autoScrollTimer));
+                        carousel.addEventListener('mouseleave', startAutoScroll);
+
+                        // Mobil dokunmatik etkilesimler için
+                        carousel.addEventListener('touchstart', () => clearInterval(autoScrollTimer));
+                        carousel.addEventListener('touchend', startAutoScroll);
+
+                        startAutoScroll();
+                    });
+                </script>
+                <!--
+                <div style="text-align: center; margin-bottom: 30px;">
+                    <h4 style="font-size: 1.5em; opacity: 0.9;">Tüm Sistemler & Ortamlar</h4>
+                </div>
+
+                <div class="skills-grid">
+                    <div class="skill-card glass-card hover-lift hover-glow-windows">
+                        <i class="fab fa-windows skill-icon" style="color: #00A4EF;"></i>
+                        <h4>Windows 11</h4>
+                    </div>
+                    <div class="skill-card glass-card hover-lift hover-glow-windows10">
+                        <i class="fab fa-windows skill-icon" style="color: #0078D7;"></i>
+                        <h4>Windows 10</h4>
+                    </div>
+                    <div class="skill-card glass-card hover-lift hover-glow-ubuntu">
+                        <i class="fab fa-ubuntu skill-icon" style="color: #E95420;"></i>
+                        <h4>Ubuntu</h4>
+                    </div>
+                    <div class="skill-card glass-card hover-lift hover-glow-arch">
+                        <i class="devicon-archlinux-plain skill-icon" style="color: #1793D1;"></i>
+                        <h4>Arch Linux</h4>
+                    </div>
+                    <div class="skill-card glass-card hover-lift hover-glow-fedora">
+                        <i class="fab fa-fedora skill-icon" style="color: #294172;"></i>
+                        <h4>Fedora</h4>
+                    </div>
+                    <div class="skill-card glass-card hover-lift hover-glow-debian">
+                        <i class="devicon-debian-plain skill-icon" style="color: #D70A53;"></i>
+                        <h4>Debian</h4>
+                    </div>
+                    <div class="skill-card glass-card hover-lift hover-glow-kali">
+                        <i class="fas fa-dragon skill-icon" style="color: #557C94;"></i>
+                        <h4>Kali Linux</h4>
+                    </div>
+                    <div class="skill-card glass-card hover-lift hover-glow-redhat">
+                        <i class="fab fa-redhat skill-icon" style="color: #EE0000;"></i>
+                        <h4>Red Hat</h4>
+                    </div>
+                    <div class="skill-card glass-card hover-lift hover-glow-suse">
+                        <i class="fab fa-suse skill-icon" style="color: #02D35F;"></i>
+                        <h4>SUSE</h4>
+                    </div>
+                    <div class="skill-card glass-card hover-lift hover-glow-centos">
+                        <i class="fab fa-centos skill-icon" style="color: #262577;"></i>
+                        <h4>CentOS</h4>
+                    </div>
+                    <div class="skill-card glass-card hover-lift hover-glow-macos">
+                        <i class="fab fa-apple skill-icon" style="color: #FFFFFF;"></i>
+                        <h4>macOS</h4>
+                    </div>
+                    <div class="skill-card glass-card hover-lift hover-glow-android">
+                        <i class="fab fa-android skill-icon" style="color: #3DDC84;"></i>
+                        <h4>Android</h4>
+                    </div>
+                </div>
+            </div>
+-->
+                <!-- Skills Section -->
+                <div id="skills" style="margin-top: 80px;">
+                    <div style="text-align: center; margin-bottom: 40px;">
+                        <h3 class="gradient-text glow-text" style="font-size: 2em; margin-bottom: 10px;">Kullandığım
+                            Teknolojiler</h3>
+                        <p style="opacity: 0.8;">Geliştirme sürecimi güçlendiren premium araç seti.</p>
+                    </div>
+                    <div class="skills-grid">
+                        <div class="skill-card glass-card hover-lift hover-glow-orange">
+                            <i class="fab fa-html5 skill-icon" style="color: #FF5722;"></i>
+                            <h4>HTML5 & CSS3</h4>
+                        </div>
+                        <div class="skill-card glass-card hover-lift hover-glow-yellow">
+                            <i class="fab fa-js skill-icon" style="color: #FFDF00;"></i>
+                            <h4>JavaScript</h4>
+                        </div>
+                        <!-- <div class="skill-card glass-card hover-lift hover-glow-ts">
+                            <i class="devicon-typescript-plain skill-icon" style="color: #3178C6;"></i>
+                            <h4>TypeScript</h4>
+                        </div>
+                        <div class="skill-card glass-card hover-lift hover-glow-blue">
+                            <i class="fab fa-react skill-icon" style="color: #00D8FF;"></i>
+                            <h4>React</h4>
+                        </div>
+                        <div class="skill-card glass-card hover-lift hover-glow-vue">
+                            <i class="fab fa-vuejs skill-icon" style="color: #4FC08D;"></i>
+                            <h4>Vue.js</h4>
+                        </div>
+                        <div class="skill-card glass-card hover-lift hover-glow-angular">
+                            <i class="fab fa-angular skill-icon" style="color: #DD0031;"></i>
+                            <h4>Angular</h4>
+                        </div>-->
+                        <div class="skill-card glass-card hover-lift hover-glow-green">
+                            <i class="fab fa-node-js skill-icon" style="color: #68A063;"></i>
+                            <h4>Node.js</h4>
+                        </div>
+                        <div class="skill-card glass-card hover-lift hover-glow-python">
+                            <i class="fab fa-python skill-icon" style="color: #3776AB;"></i>
+                            <h4>Python</h4>
+                        </div>
+                        <div class="skill-card glass-card hover-lift hover-glow-java">
+                            <i class="fab fa-java skill-icon" style="color: #f89820;"></i>
+                            <h4>Java</h4>
+                        </div><!--
+                        <div class="skill-card glass-card hover-lift hover-glow-cpp">
+                            <i class="devicon-cplusplus-plain skill-icon" style="color: #00599C;"></i>
+                            <h4>C++</h4>
+                        </div>-->
+                        <div class="skill-card glass-card hover-lift hover-glow-csharp">
+                            <i class="devicon-csharp-plain skill-icon" style="color: #9B4F96;"></i>
+                            <h4>C#</h4>
+                        </div>
+                        <div class="skill-card glass-card hover-lift hover-glow-php">
+                            <i class="fab fa-php skill-icon" style="color: #777BB4;"></i>
+                            <h4>PHP</h4>
+                        </div><!--
+                        <div class="skill-card glass-card hover-lift hover-glow-go">
+                            <i class="fab fa-golang skill-icon" style="color: #00ADD8;"></i>
+                            <h4>Go</h4>
+                        </div>
+                        <div class="skill-card glass-card hover-lift hover-glow-rust">
+                            <i class="fas fa-cog skill-icon" style="color: #DEA584;"></i>
+                            <h4>Rust</h4>
+                        </div>
+                        <div class="skill-card glass-card hover-lift hover-glow-swift">
+                            <i class="fab fa-swift skill-icon" style="color: #F05138;"></i>
+                            <h4>Swift</h4>
+                        </div>
+                        <div class="skill-card glass-card hover-lift hover-glow-ruby">
+                            <i class="fas fa-gem skill-icon" style="color: #CC342D;"></i>
+                            <h4>Ruby</h4>
+                        </div>-->
+                        <div class="skill-card glass-card hover-lift hover-glow-sql">
+                            <i class="fas fa-database skill-icon" style="color: #F29111;"></i>
+                            <h4>SQL</h4>
+                        </div><!--
+                        <div class="skill-card glass-card hover-lift hover-glow-docker">
+                            <i class="fab fa-docker skill-icon" style="color: #2496ED;"></i>
+                            <h4>Docker</h4>
+                        </div>
+                        <div class="skill-card glass-card hover-lift hover-glow-aws">
+                            <i class="fab fa-aws skill-icon" style="color: #FF9900;"></i>
+                            <h4>AWS</h4>
+                        </div>
+                        <div class="skill-card glass-card hover-lift hover-glow-linux">
+                            <i class="fab fa-linux skill-icon" style="color: #FCC624;"></i>
+                            <h4>Linux</h4>
+                        </div>-->
+                        <div class="skill-card glass-card hover-lift hover-glow-red">
+                            <i class="fab fa-git-alt skill-icon" style="color: #F1502F;"></i>
+                            <h4>Git</h4>
+                        </div>
+                        <!-- 
+                        <div class="skill-card glass-card hover-lift hover-glow-tailwind">
+                            <i class="devicon-tailwindcss-original skill-icon" style="color: #38B2AC;"></i>
+                            <h4>Tailwind</h4>
+                        </div>
+                        <div class="skill-card glass-card hover-lift hover-glow-nextjs">
+                            <i class="devicon-nextjs-plain skill-icon" style="color: #FFFFFF;"></i>
+                            <h4>Next.js</h4>
+                        </div>-->
+                        <div class="skill-card glass-card hover-lift hover-glow-mongo">
+                            <i class="devicon-mongodb-plain skill-icon" style="color: #47A248;"></i>
+                            <h4>MongoDB</h4>
+                        </div>
+                        <div class="skill-card glass-card hover-lift hover-glow-flutter">
+                            <i class="devicon-flutter-plain skill-icon" style="color: #54C5F8;"></i>
+                            <h4>Flutter</h4>
+                        </div>
+                        <div class="skill-card glass-card hover-lift hover-glow-capacitor">
+                            <i class="fas fa-bolt skill-icon" style="color: #53B9EA;"></i>
+                            <h4>Capacitor</h4>
+                        </div>
+                        <div class="skill-card glass-card hover-lift hover-glow-electron">
+                            <i class="devicon-electron-original skill-icon" style="color: #9FEAF9;"></i>
+                            <h4>Electron</h4>
+                        </div>
+                        <div class="skill-card glass-card hover-lift hover-glow-dotnet">
+                            <i class="devicon-dot-net-plain skill-icon" style="color: #512BD4;"></i>
+                            <h4>ASP.NET</h4>
+                        </div><!--
+                        <div class="skill-card glass-card hover-lift hover-glow-postgres">
+                            <i class="devicon-postgresql-plain skill-icon" style="color: #336791;"></i>
+                            <h4>PostgreSQL</h4>
+                        </div>
+                        <div class="skill-card glass-card hover-lift hover-glow-k8s">
+                            <i class="devicon-kubernetes-plain skill-icon" style="color: #326CE5;"></i>
+                            <h4>Kubernetes</h4>
+                        </div>
+                        <div class="skill-card glass-card hover-lift hover-glow-nginx">
+                            <i class="fas fa-server skill-icon" style="color: #009639;"></i>
+                            <h4>Nginx</h4>
+                        </div>
+                        <div class="skill-card glass-card hover-lift hover-glow-figma">
+                            <i class="fab fa-figma skill-icon" style="color: #F24E1E;"></i>
+                            <h4>Figma</h4>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="content-section showcase-section">
+        <div class="container">
+            <h2 class="section-title gradient-text glow-text">Öne Çıkan Projeler</h2>
+            <p class="section-subtitle">Geliştirdiğim son 3 popüler proje.</p>
+
+            <div class="projects-grid">
+                <!-- Proje 1 -->
+                <div class="project-card glass-card premium-border hover-lift">
+                    <div class="project-header">
+                        <i class="far fa-folder-open folder-icon glow-text"></i>
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3>Awesome Web App</h3>
+                    <p>Modern arayüz tasarımı ve güçlü backend altyapısıyla harmanlanmış interaktif platform.</p>
+                    <ul class="project-tech-list">
+                        <li>React</li>
+                        <li>Node</li>
+                        <li>MongoDB</li>
+                    </ul>
+                </div>
+
+                <!-- Proje 2 -->
+                <div class="project-card glass-card premium-border hover-lift">
+                    <div class="project-header">
+                        <i class="far fa-folder-open folder-icon glow-text"></i>
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3>CLI Automation Tool</h3>
+                    <p>Geliştiricilerin rutin işlerini otomatikleştirmek için tasarlanmış süper hızlı Python aracı.</p>
+                    <ul class="project-tech-list">
+                        <li>Python</li>
+                        <li>Automation</li>
+                    </ul>
+                </div>
+
+                <!-- Proje 3 -->
+                <div class="project-card glass-card premium-border hover-lift">
+                    <div class="project-header">
+                        <i class="far fa-folder-open folder-icon glow-text"></i>
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="links.html"><i class="fas fa-link"></i></a>
+                        </div>
+                    </div>
+                    <h3>Linktree Klonu</h3>
+                    <p>Tamamen glassmorphism ve neon konseptli profesyonel bağlantı sergileme sayfası.</p>
+                    <ul class="project-tech-list">
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="margin-top: 60px;">
+                <!-- DİKKAT: Artık ayrı projects.html sayfasına gidiyor -->
+                <a href="projects.html" class="link-button solid gold-gradient glow-hover">
+                    <span style="color: #000; font-weight:800;">Tüm Projelerimi Gör <i
+                            class="fas fa-arrow-right"></i></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer glass">
+        <div class="container" style="text-align: center; padding: 40px 0;">
+            <h2 class="gradient-text glow-text" style="font-size: 2.5em; margin-bottom: 20px;">Bağlantıda Kalalım</h2>
+
+            <!-- DÜZELTME: Footer ikonlarına social-icon class'ı eklendi -->
+            <div class="social-links big-social"
+                style="display:flex; justify-content: center; margin-bottom: 30px; gap: 20px;">
+                <!--<a href="#" target="_blank" class="social-icon youtube-icon"><i class="fab fa-youtube"></i></a>-->
+                <a href="https://github.com/ayascell" target="_blank" class="social-icon github-icon"><i
+                        class="fab fa-github"></i></a>
+                <!--<a href="#" target="_blank" class="social-icon linkedin-icon"><i class="fab fa-linkedin-in"></i></a>-->
+                <!--<a href="#" target="_blank" class="social-icon twitter-icon"><i class="fab fa-x-twitter"></i></a>-->
+            </div>
+
+            <a href="links.html" class="link-button outline neon-btn" style="margin-bottom: 30px;">
+                <span>Tüm Linklerimi Gör <i class="fas fa-external-link-alt"></i></span>
+            </a>
+            <p class="copyright-text" style="opacity: 0.5;">© 2024 AYASCELL. Premium Tasarım ile Kodlandı.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -218,10 +218,10 @@ body {
 }
 
 .neon-btn:hover {
-    background: var(--primary-gold);
-    color: var(--dark-bg) !important;
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.6), inset 0 0 15px rgba(255, 255, 255, 0.5);
-    text-shadow: none !important;
+    background: rgba(212, 175, 55, 0.1);
+    color: var(--primary-gold) !important;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4), inset 0 0 10px rgba(212, 175, 55, 0.2);
+    text-shadow: 0 0 8px rgba(212, 175, 55, 0.6) !important;
 }
 
 .menu-toggle {

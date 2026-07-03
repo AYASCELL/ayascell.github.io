@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-
     // --- Mobil Menü İşlemleri ---
     const menuToggle = document.getElementById('menu-toggle');
     const navLinks = document.getElementById('nav-links');

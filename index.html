@@ -179,22 +179,36 @@
                                     style="width: 100%; max-width: 550px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
                             </div>
                         </div>
-                        
-                         <!-- İşletim Sistemi 3 (Windows 10) -->
-                         <div
+
+                        <!-- İşletim Sistemi 2 (Pika OS) -->
+                        <div
                             style="min-width: 100%; scroll-snap-align: center; display: flex; align-items: center; justify-content: center; gap: 50px; padding: 60px 40px; flex-wrap: wrap-reverse;">
+                            <div style="text-align: center;">
+                                <img src="assets/deb.png" alt="Pika OS Desktop"
+                                    style="width: 100%; max-width: 550px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                            </div>
+                            <div style="text-align: center; min-width: 200px;">
+                                <img src="assets/pika-os.png" alt="Pika OS Logo"
+                                    style="width: 5.5em; height: 5.5em; border-radius: 50%; object-fit: contain; margin-bottom: 5px;">
+                                <h4 style="font-size: 1.6em; margin-top: 15px; color: #fff;">Pika OS</h4>
+                                <p style="opacity: 0.7; font-size: 0.9em; margin-bottom: 0;">OS Geliştirme Ortamım
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- İşletim Sistemi 3 (Windows 10) -->
+                        <div
+                            style="min-width: 100%; scroll-snap-align: center; display: flex; align-items: center; justify-content: center; gap: 50px; padding: 60px 40px; flex-wrap: wrap;">
+                            <div style="text-align: center; min-width: 200px;">
+                                <i class="fab fa-windows" style="font-size: 5.5em; color: #00A4EF;"></i>
+                                <h4 style="font-size: 1.6em; margin-top: 20px; color: #fff;">Windows 10</h4>
+                                <p style="opacity: 0.7; font-size: 0.9em; margin-bottom: 0;">Genel Kullanım Ortamım</p>
+                            </div>
                             <div style="text-align: center;">
                                 <img src="assets/windows.png" alt="Windows Desktop"
                                     style="width: 100%; max-width: 550px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
                             </div>
-                            <div style="text-align: center; min-width: 200px;">
-                                <i class="fab fa-windows" style="font-size: 5.5em; color: #00A4EF;"></i>
-                                <h4 style="font-size: 1.6em; margin-top: 20px; color: #fff;">Windows 10</h4>
-                                <p style="opacity: 0.7; font-size: 0.9em; margin-bottom: 0;">Oyun ve Genel Kullanım
-                                    Ortamım</p>
-                            </div>
                         </div>
-                        
                     </div>
 
                     <!-- Carousel Pagination Indicators -->
@@ -203,6 +217,8 @@
                         <span class="carousel-dot active" onclick="scrollToSlide(0)"
                             style="width: 25px; height: 6px; border-radius: 3px; background: var(--primary-gold); cursor: pointer; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);"></span>
                         <span class="carousel-dot" onclick="scrollToSlide(1)"
+                            style="width: 10px; height: 6px; border-radius: 3px; background: rgba(255,255,255,0.2); cursor: pointer; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);"></span>
+                        <span class="carousel-dot" onclick="scrollToSlide(2)"
                             style="width: 10px; height: 6px; border-radius: 3px; background: rgba(255,255,255,0.2); cursor: pointer; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);"></span>
                     </div>
                 </div>
@@ -377,7 +393,8 @@
                         style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
                         <div class="spec-item glass-card hover-lift hover-glow-blue"
                             style="background: rgba(255,255,255,0.02); padding: 20px; border-radius: 15px; text-align: center;">
-                            <img src="https://cdn.simpleicons.org/intel/00D8FF" alt="Intel" style="width: 2.5em; height: 2.5em; margin-bottom: 15px; display: inline-block;" />
+                            <img src="https://cdn.simpleicons.org/intel/00D8FF" alt="Intel"
+                                style="width: 2.5em; height: 2.5em; margin-bottom: 15px; display: inline-block;" />
                             <h4 style="margin-bottom: 5px; font-size: 1.1em;">İşlemci</h4>
                             <p style="opacity: 0.7; font-size: 0.9em;">(Intel i7 13650HX)</p>
                         </div>
@@ -397,7 +414,8 @@
                         </div>
                         <div class="spec-item glass-card hover-lift hover-glow-purple"
                             style="background: rgba(255,255,255,0.02); padding: 20px; border-radius: 15px; text-align: center;">
-                            <img src="https://cdn.simpleicons.org/nvidia/76B900" alt="NVIDIA" style="width: 2.5em; height: 2.5em; margin-bottom: 15px; display: inline-block;" />
+                            <img src="https://cdn.simpleicons.org/nvidia/76B900" alt="NVIDIA"
+                                style="width: 2.5em; height: 2.5em; margin-bottom: 15px; display: inline-block;" />
                             <h4 style="margin-bottom: 5px; font-size: 1.1em;">Ekran Kartı</h4>
                             <p style="opacity: 0.7; font-size: 0.9em;">(RTX 4060)</p>
                         </div>
@@ -410,12 +428,15 @@
                         </div>
                         <div class="spec-item glass-card hover-lift hover-glow-cyan"
                             style="background: rgba(255,255,255,0.02); padding: 20px; border-radius: 15px; text-align: center;">
-                            <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 15px;">
+                            <div
+                                style="display: flex; justify-content: center; align-items: center; gap: 20px; margin-bottom: 15px;">
                                 <i class="devicon-archlinux-plain" style="font-size: 2.5em; color: #1793D1;"></i>
+                                <img src="assets/pika-os.png" alt="Pika OS"
+                                    style="width: 2.2em; height: 2.2em; border-radius: 50%; object-fit: contain;" />
                                 <i class="fab fa-windows" style="font-size: 2.5em; color: #00A4EF;"></i>
                             </div>
                             <h4 style="margin-bottom: 5px; font-size: 1.1em;">İşletim Sistemi</h4>
-                            <p style="opacity: 0.7; font-size: 0.9em;">(Arch Linux / Windows 10)</p>
+                            <p style="opacity: 0.7; font-size: 0.9em;">(Arch Linux / Pika OS / Win 10)</p>
                         </div>
                         <div class="spec-item glass-card hover-lift hover-glow-red"
                             style="background: rgba(255,255,255,0.02); padding: 20px; border-radius: 15px; text-align: center; grid-column: 1 / -1;">

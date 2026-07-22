@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <!-- Ana Sayfa -->
+  <url>
+    <loc>https://ayascell.github.io/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <priority>1.00</priority>
+  </url>
+
+  <!-- Ayas Discussions Sayfası -->
+  <url>
+    <loc>https://ayascell.github.io/ayas-discussions/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- AyasOS Proje Sayfası -->
+  <url>
+    <loc>https://ayascell.github.io/AyasOS/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Linkler Sayfası -->
+  <url>
+    <loc>https://ayascell.github.io/links.html</loc>
+    <lastmod>2026-07-22</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+</urlset>

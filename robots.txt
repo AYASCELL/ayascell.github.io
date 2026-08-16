@@ -1,4 +1,42 @@
+# ==============================================================================
+# AYASCELL Official Ecosystem - Robots Exclusion Standard (RFC 9309)
+# Website: https://ayascell.com/
+# ==============================================================================
+
+# Global Crawler Permissions
 User-agent: *
 Allow: /
+Disallow: /sonra/
+Disallow: /scratch/
+Disallow: /tests/
+Disallow: /*.json$
+Disallow: /*.lock$
 
+# Googlebot Directives
+User-agent: Googlebot
+Allow: /
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.svg$
+Allow: /*.webp$
+Allow: /*.ico$
+
+# Googlebot Image Crawler Directives
+User-agent: Googlebot-Image
+Allow: /assets/
+Allow: /favicon.png
+Allow: /favicon.ico
+
+# Bingbot Directives
+User-agent: Bingbot
+Allow: /
+
+# Applebot Directives
+User-agent: Applebot
+Allow: /
+
+# XML Sitemap Index
 Sitemap: https://ayascell.com/sitemap.xml

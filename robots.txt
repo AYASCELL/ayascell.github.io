@@ -12,6 +12,7 @@ Allow: /
 # Prevent indexing of technical, system, and raw developer files
 Disallow: /google*.html
 Disallow: /CNAME
+Disallow: /*2-Photoroom*.png$
 Disallow: /*.sh$
 Disallow: /*.md$
 Disallow: /*.json$
@@ -34,6 +35,7 @@ User-agent: Baiduspider
 User-agent: NaverBot
 User-agent: SeznamBot
 Allow: /
+Disallow: /*2-Photoroom*.png$
 Allow: /*.css$
 Allow: /*.js$
 Allow: /*.png$

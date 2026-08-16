@@ -1,19 +1,38 @@
 # ==============================================================================
-# AYASCELL Official Ecosystem - Robots Exclusion Standard (RFC 9309)
+# AYASCELL Ecosystem - Robots Exclusion Standard (RFC 9309)
 # Website: https://ayascell.com/
 # ==============================================================================
 
-# Global Crawler Permissions
+# ------------------------------------------------------------------------------
+# 1. Global Crawler Policy
+# ------------------------------------------------------------------------------
 User-agent: *
 Allow: /
-Disallow: /sonra/
-Disallow: /scratch/
-Disallow: /tests/
+
+# Prevent indexing of technical, system, and raw developer files
+Disallow: /google*.html
+Disallow: /CNAME
+Disallow: /*.sh$
+Disallow: /*.md$
 Disallow: /*.json$
 Disallow: /*.lock$
+Disallow: /*.bak$
+Disallow: /*.tmp$
 
-# Googlebot Directives
+# ------------------------------------------------------------------------------
+# 2. Major Search Engine Web Crawlers
+# ------------------------------------------------------------------------------
 User-agent: Googlebot
+User-agent: Googlebot-Image
+User-agent: Googlebot-Video
+User-agent: Bingbot
+User-agent: Applebot
+User-agent: DuckDuckBot
+User-agent: YandexBot
+User-agent: Yandex
+User-agent: Baiduspider
+User-agent: NaverBot
+User-agent: SeznamBot
 Allow: /
 Allow: /*.css$
 Allow: /*.js$
@@ -23,20 +42,33 @@ Allow: /*.jpeg$
 Allow: /*.svg$
 Allow: /*.webp$
 Allow: /*.ico$
-
-# Googlebot Image Crawler Directives
-User-agent: Googlebot-Image
 Allow: /assets/
-Allow: /favicon.png
-Allow: /favicon.ico
 
-# Bingbot Directives
-User-agent: Bingbot
+# ------------------------------------------------------------------------------
+# 3. AI & LLM Search Engine Crawlers (ChatGPT, Claude, Perplexity, Gemini)
+# ------------------------------------------------------------------------------
+User-agent: GPTBot
+User-agent: ChatGPT-User
+User-agent: OAI-SearchBot
+User-agent: ClaudeBot
+User-agent: Claude-User
+User-agent: Claude-SearchBot
+User-agent: PerplexityBot
+User-agent: Google-Extended
 Allow: /
 
-# Applebot Directives
-User-agent: Applebot
+# ------------------------------------------------------------------------------
+# 4. Social Media & Rich Preview Crawlers
+# ------------------------------------------------------------------------------
+User-agent: Twitterbot
+User-agent: facebookexternalhit
+User-agent: LinkedInBot
+User-agent: WhatsApp
+User-agent: TelegramBot
 Allow: /
+Allow: /assets/
 
-# XML Sitemap Index
+# ------------------------------------------------------------------------------
+# 5. XML Sitemap Index
+# ------------------------------------------------------------------------------
 Sitemap: https://ayascell.com/sitemap.xml

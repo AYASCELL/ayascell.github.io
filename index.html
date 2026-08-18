@@ -41,18 +41,57 @@
     <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
 
-    <!-- Structured Data (Schema.org JSON-LD) -->
+    <!-- Structured Data (Schema.org JSON-LD - Sitelinks & Knowledge Graph) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "AYASCELL",
-      "url": "https://ayascell.com/",
-      "image": "https://ayascell.com/assets/ayascell-logo-dark.png",
-      "logo": "https://ayascell.com/assets/ayascell-logo-dark.png",
-      "jobTitle": "Full Stack Developer",
-      "sameAs": [
-        "https://github.com/ayascell"
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://ayascell.com/#person",
+          "name": "AYASCELL",
+          "url": "https://ayascell.com/",
+          "image": "https://ayascell.com/assets/ayascell-logo-dark.png",
+          "logo": "https://ayascell.com/assets/ayascell-logo-dark.png",
+          "jobTitle": "Full Stack Developer",
+          "sameAs": [
+            "https://github.com/ayascell",
+            "https://www.youtube.com/channel/UCInPupaLoQw-3z29fCrZPmg",
+            "https://twitch.tv/ayascellgamingtr",
+            "https://linktr.ee/ayascellgamingtr"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://ayascell.com/#website",
+          "url": "https://ayascell.com/",
+          "name": "AYASCELL",
+          "publisher": {
+            "@id": "https://ayascell.com/#person"
+          },
+          "hasPart": [
+            {
+              "@type": "SiteNavigationElement",
+              "name": "Ekosistem",
+              "url": "https://ayascell.com/ayascell-ecosystem/"
+            },
+            {
+              "@type": "SiteNavigationElement",
+              "name": "Ayas OS",
+              "url": "https://ayascell.com/AyasOS/"
+            },
+            {
+              "@type": "SiteNavigationElement",
+              "name": "Topluluk",
+              "url": "https://ayascell.com/ayas-discussions/"
+            },
+            {
+              "@type": "SiteNavigationElement",
+              "name": "Linkler",
+              "url": "https://ayascell.com/links.html"
+            }
+          ]
+        }
       ]
     }
     </script>

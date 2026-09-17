@@ -10,7 +10,7 @@
 
   <!-- 2. Ecosystem Main Hub (High Priority) -->
   <url>
-    <loc>https://ayascell.com/ayascell-ecosystem/</loc>
+    <loc>https://ayascell.com/ecosystem/</loc>
     <lastmod>2026-08-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.95</priority>
@@ -24,15 +24,7 @@
     <priority>0.90</priority>
   </url>
 
-  <!-- 4. Ecosystem Games & Entertainment (Active Closed Betas) -->
-  <url>
-    <loc>https://ayascell.com/ayascell-ecosystem/games.html</loc>
-    <lastmod>2026-08-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.90</priority>
-  </url>
-
-  <!-- 5. Community & Discussions -->
+  <!-- 4. Community & Discussions -->
   <url>
     <loc>https://ayascell.com/ayas-discussions/</loc>
     <lastmod>2026-08-26</lastmod>
@@ -40,23 +32,7 @@
     <priority>0.85</priority>
   </url>
 
-  <!-- 6. Ecosystem Desktop Software -->
-  <url>
-    <loc>https://ayascell.com/ayascell-ecosystem/desktop.html</loc>
-    <lastmod>2026-08-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-
-  <!-- 7. Ecosystem Mobile Apps -->
-  <url>
-    <loc>https://ayascell.com/ayascell-ecosystem/mobile.html</loc>
-    <lastmod>2026-08-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-
-  <!-- 8. Links & Official Channels -->
+  <!-- 5. Links & Official Channels -->
   <url>
     <loc>https://ayascell.com/links.html</loc>
     <lastmod>2026-08-26</lastmod>
@@ -64,11 +40,11 @@
     <priority>0.80</priority>
   </url>
 
-  <!-- 9. Closed Beta Guide -->
+  <!-- 6. Workspace & Hardware Setup -->
   <url>
-    <loc>https://ayascell.com/ayascell-ecosystem/closed-beta-guide.html</loc>
-    <lastmod>2026-08-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
+    <loc>https://ayascell.com/setup.html</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
   </url>
 </urlset>

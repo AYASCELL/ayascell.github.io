@@ -54,56 +54,56 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Arka Plan Yıldız Efekti ---
     const canvas = document.getElementById('starfield-canvas');
-    if(!canvas) return;
+    if (canvas) {
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
 
-    function resizeCanvas() {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
+        const ctx = canvas.getContext('2d');
+        const stars = [];
+        const numStars = 200; 
+
+        for (let i = 0; i < numStars; i++) {
+            stars.push({
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                radius: Math.random() * 1.5 + 0.5,
+                alpha: Math.random(),
+                speed: Math.random() * 0.1 + 0.05,
+                twinkleSpeed: Math.random() * 0.02
+            });
+        }
+
+        function drawStars() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            stars.forEach(star => {
+                star.y -= star.speed;
+                if (star.y < 0) {
+                    star.y = canvas.height;
+                    star.x = Math.random() * canvas.width;
+                }
+
+                star.alpha += star.twinkleSpeed;
+                if (star.alpha > 1 || star.alpha < 0) {
+                    star.twinkleSpeed = -star.twinkleSpeed;
+                }
+
+                ctx.beginPath();
+                ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(240, 230, 140, ${star.alpha})`;
+                ctx.fill();
+            });
+
+            requestAnimationFrame(drawStars);
+        }
+
+        drawStars();
     }
-    
-    window.addEventListener('resize', resizeCanvas);
-    resizeCanvas();
-
-    const ctx = canvas.getContext('2d');
-    const stars = [];
-    const numStars = 200; 
-
-    for (let i = 0; i < numStars; i++) {
-        stars.push({
-            x: Math.random() * canvas.width,
-            y: Math.random() * canvas.height,
-            radius: Math.random() * 1.5 + 0.5,
-            alpha: Math.random(),
-            speed: Math.random() * 0.1 + 0.05,
-            twinkleSpeed: Math.random() * 0.02
-        });
-    }
-
-    function drawStars() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-        stars.forEach(star => {
-            star.y -= star.speed;
-            if (star.y < 0) {
-                star.y = canvas.height;
-                star.x = Math.random() * canvas.width;
-            }
-
-            star.alpha += star.twinkleSpeed;
-            if (star.alpha > 1 || star.alpha < 0) {
-                star.twinkleSpeed = -star.twinkleSpeed;
-            }
-
-            ctx.beginPath();
-            ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
-            ctx.fillStyle = `rgba(240, 230, 140, ${star.alpha})`;
-            ctx.fill();
-        });
-
-        requestAnimationFrame(drawStars);
-    }
-
-    drawStars();
 
     // Bilingual Switcher Logic
     const langToggleBtn = document.getElementById('lang-toggle');
@@ -146,5 +146,57 @@ document.addEventListener('DOMContentLoaded', () => {
             el.innerHTML = `&copy; ${currentYear} AYASCELL`;
         }
     });
+
+    // --- Görsel Büyütme (Lightbox Modal) ---
+    const lightboxModal = document.getElementById('image-lightbox');
+    if (lightboxModal) {
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxCaption = document.getElementById('lightbox-caption');
+        const closeBtn = document.getElementById('lightbox-close-btn');
+        const backdrop = lightboxModal.querySelector('.lightbox-backdrop');
+
+        function openLightbox(src, alt) {
+            if (!lightboxImg || !src) return;
+            lightboxImg.src = src;
+            lightboxImg.alt = alt || 'Görsel Önizleme';
+            if (lightboxCaption) {
+                lightboxCaption.textContent = alt || '';
+                lightboxCaption.style.display = alt ? 'inline-block' : 'none';
+            }
+            lightboxModal.classList.add('active');
+            lightboxModal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightboxModal.classList.remove('active');
+            lightboxModal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+            setTimeout(() => {
+                if (!lightboxModal.classList.contains('active') && lightboxImg) {
+                    lightboxImg.src = '';
+                }
+            }, 300);
+        }
+
+        // Tıklanabilir görsel konteynerleri ve resimleri bağla
+        document.querySelectorAll('.os-screenshot-wrapper, .setup-image-frame, .lightbox-trigger').forEach(wrapper => {
+            wrapper.addEventListener('click', (e) => {
+                const img = wrapper.querySelector('img') || (wrapper.tagName === 'IMG' ? wrapper : null);
+                if (img && img.src) {
+                    openLightbox(img.src, img.alt);
+                }
+            });
+        });
+
+        if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
+        if (backdrop) backdrop.addEventListener('click', closeLightbox);
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightboxModal.classList.contains('active')) {
+                closeLightbox();
+            }
+        });
+    }
 
 });

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Önbellek Engelleme / Anlık Güncelleme Başlangıcı -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <!-- Önbellek Engelleme / Anlık Güncelleme Sonu -->
+    <title>Oyunlar | AYASCELL Ecosystem</title>
+
+    <link rel="canonical" href="https://ayascell.com/ecosystem/games.html">
+    <meta name="description" content="AYASCELL mobil ve masaüstü oyunları.">
+    <meta name="author" content="AYASCELL">
+    <meta name="robots" content="noindex, follow">
+    <meta name="googlebot" content="noindex, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="AYASCELL">
+    <meta property="og:url" content="https://ayascell.com/ecosystem/games.html">
+    <meta property="og:title" content="Oyunlar | AYASCELL Ecosystem">
+    <meta property="og:description" content="AYASCELL mobil ve masaüstü oyunları.">
+    <meta property="og:image" content="https://ayascell.com/assets/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Oyunlar | AYASCELL Ecosystem">
+    <meta name="twitter:description" content="AYASCELL mobil ve masaüstü oyunları.">
+    <meta name="twitter:image" content="https://ayascell.com/assets/og-image.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "AYASCELL Oyunlar",
+      "url": "https://ayascell.com/ecosystem/games.html",
+      "image": "https://ayascell.com/assets/ayascell-logo-dark.png",
+      "publisher": {
+        "@type": "Person",
+        "name": "AYASCELL",
+        "url": "https://ayascell.com/"
+      }
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <canvas id="starfield-canvas"></canvas>
+    <div class="glass-overlay"></div>
+
+    <!-- Header Navigation -->
+    <header class="main-header">
+        <nav class="navbar">
+            <a href="index.html" class="logo-link">
+                <img src="assets/2-Photoroom.png" alt="AYASCELL Logo" class="header-logo-image">
+                <span class="gradient-text header-logo-text glow-text">AYASCELL Ecosystem</span>
+            </a>
+            <div class="menu-toggle" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li>
+                    <a href="index.html">
+                        <i class="fas fa-home"></i>
+                        <span class="lang-en">Home</span>
+                        <span class="lang-tr">Ana Sayfa</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://ayascell.com/">
+                        <i class="fas fa-arrow-left"></i>
+                        <span class="lang-en">Developer</span>
+                        <span class="lang-tr">Geliştirici</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="pc.html">
+                        <i class="fas fa-desktop"></i>
+                        <span class="lang-en">PC</span>
+                        <span class="lang-tr">PC</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="mobile.html">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span class="lang-en">Mobile</span>
+                        <span class="lang-tr">Mobil</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="games.html" class="active">
+                        <i class="fas fa-gamepad"></i>
+                        <span class="lang-en">Games</span>
+                        <span class="lang-tr">Oyunlar</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://ayascell.com/AyasOS/" target="_blank">
+                        <i class="fas fa-compact-disc"></i>
+                        <span class="lang-en">Ayas OS</span>
+                        <span class="lang-tr">Ayas OS</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://ayascell.com/ayas-discussions/" target="_blank">
+                        <i class="fas fa-comments"></i>
+                        <span class="lang-en">Community</span>
+                        <span class="lang-tr">Topluluk</span>
+                    </a>
+                </li>
+                <li>
+                    <button id="lang-toggle" class="lang-btn">
+                        <i class="fas fa-globe"></i> <span id="current-lang">TR</span>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Subpage Banner -->
+    <section class="hero-section subpage-hero">
+        <div class="container">
+            <h1 class="gradient-text mega-title glow-text">
+                <span class="lang-en">Games & Entertainment</span>
+                <span class="lang-tr">Oyunlar & Eğlence</span>
+            </h1>
+            <p class="subtitle">
+                <span class="lang-en">Fun independent games, strategic puzzles, and exciting arcade experiences.</span>
+                <span class="lang-tr">Eğlenceli bağımsız oyunlar, stratejik bulmacalar ve heyecanlı arcade
+                    deneyimleri.</span>
+            </p>
+        </div>
+    </section>
+
+    <!-- Shared Closed Beta Announcement Banner -->
+    <section class="container" style="margin-bottom: 40px;">
+        <div class="glass-card premium-border"
+            style="padding: 32px 24px; border-radius: 16px; background: rgba(212, 175, 55, 0.05); border-color: rgba(212, 175, 55, 0.35); text-align: center;">
+            <div
+                style="display: inline-flex; align-items: center; gap: 8px; background: rgba(212, 175, 55, 0.15); border: 1px solid var(--primary-gold); padding: 6px 18px; border-radius: 20px; color: var(--primary-gold); font-size: 0.9em; font-weight: 600; margin-bottom: 16px;">
+                <i class="fas fa-flask"></i> <span class="lang-tr">Ortak Kapalı Test Programı</span><span
+                    class="lang-en">Unified Closed Beta Program</span>
+            </div>
+            <h3 style="font-size: 1.6em; margin-bottom: 12px;" class="gradient-text glow-text">
+                <span class="lang-tr">Yeni Oyunlarımızı İlk Siz Deneyimleyin!</span>
+                <span class="lang-en">Be the First to Play Our New Games!</span>
+            </h3>
+            <p style="max-width: 760px; margin: 0 auto 24px; line-height: 1.6; opacity: 0.9;">
+                <span class="lang-tr">Geliştirme aşamasındaki tüm oyunlarımızın (Arrow Puzzle Challenge, Neon Puck Strike
+                    vb.) kapalı test süreçleri <strong>tek bir ortak başvuru formu</strong> üzerinden yürütülmektedir.
+                    Formu bir kez doldurarak Google Play test grubumuza katılabilir ve tüm kapalı beta oyunlarımıza
+                    doğrudan erişebilirsiniz.</span>
+                <span class="lang-en">Closed beta testing for all our upcoming games (Arrow Puzzle Challenge, Neon Puck
+                    Strike, etc.) is managed through a <strong>single unified form</strong>. Submit once to join our
+                    Google Play tester group and unlock direct access to all beta releases.</span>
+            </p>
+            <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                <a href="https://forms.gle/T1xgNxnQL53AFzpQ7" target="_blank" class="link-button beta-button"
+                    style="padding: 12px 26px; font-size: 1em;">
+                    <i class="fas fa-edit"></i> <span class="lang-tr">Kapalı Test Başvuru Formu</span><span
+                        class="lang-en">Join Closed Beta Form</span>
+                </a>
+                <a href="closed-beta-guide.html" class="link-button outline"
+                    style="padding: 12px 26px; font-size: 1em;">
+                    <i class="fas fa-book-open"></i> <span class="lang-tr">Nasıl Katılınır? (Resimli Rehber)</span><span
+                        class="lang-en">How to Join? (Guide)</span>
+                </a>
+            </div>
+            <p style="font-size: 0.83em; opacity: 0.75; margin-top: 16px; margin-bottom: 0;">
+                <i class="fas fa-clock" style="color: var(--primary-gold); margin-right: 5px;"></i>
+                <span class="lang-tr">Başvurunuz incelendikten sonra davet e-postası en geç 1-2 gün içerisinde
+                    iletilmektedir.</span>
+                <span class="lang-en">Invitations are sent via email within 1-2 business days after application
+                    review.</span>
+            </p>
+        </div>
+    </section>
+
+    <!-- Games Grid -->
+    <section class="container" style="margin-bottom: 80px;">
+        <div class="showcase-grid">
+
+            <!-- Game 1: Arrow Puzzle Challenge -->
+            <div class="project-card glass-card premium-border hover-lift">
+                <div>
+                    <div class="project-header">
+                        <span class="project-badge badge-testing"><i class="fas fa-flask"></i> Kapalı Test / Closed
+                            Beta</span>
+                        <img src="assets/arrows-puzzle-icon.png" alt="Arrow Puzzle Challenge Logo" class="app-card-icon">
+                    </div>
+                    <h4>Arrow Puzzle Challenge</h4>
+                    <p>
+                        <span class="lang-en">Mind-bending arrow direction and logic puzzle. Plan your moves, solve intricate grid paths, and clear all arrows!</span>
+                        <span class="lang-tr">Zihin açıcı ok yönlendirme ve mantık bulmacası. Hamlelerinizi planlayın, karmaşık yolları çözün ve tüm okları temizleyin!</span>
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Logic Puzzle</span>
+                        <span class="tech-tag">Brain Challenge</span>
+                    </div>
+                </div>
+                <div class="project-links-row" style="flex-wrap: wrap; gap: 10px;">
+                    <a href="https://play.google.com/store/apps/details?id=com.ayascell.arrowpuzzlechallenge"
+                        target="_blank" class="link-button solid">
+                        <i class="fab fa-google-play"></i> <span class="lang-en">Play Store</span><span
+                            class="lang-tr">Play Store</span>
+                    </a>
+                    <a href="https://play.google.com/apps/testing/com.ayascell.arrowpuzzlechallenge" target="_blank"
+                        class="link-button outline">
+                        <i class="fas fa-flask"></i> <span class="lang-en">Web Testing</span><span class="lang-tr">Web
+                            Test Sayfası</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Game 2: Neon Puck Strike -->
+            <div class="project-card glass-card premium-border hover-lift">
+                <div>
+                    <div class="project-header">
+                        <span class="project-badge badge-testing"><i class="fas fa-flask"></i> Kapalı Test / Closed
+                            Beta</span>
+                        <img src="assets/neon-puck-icon.png" alt="Neon Puck Strike Logo" class="app-card-icon">
+                    </div>
+                    <h4>Neon Puck Strike</h4>
+                    <p>
+                        <span class="lang-en">Fast-paced futuristic neon air hockey & puck battle game. Challenge AI or
+                            friends with glowing physics.</span>
+                        <span class="lang-tr">Hızlı tempolu, fütüristik neon hava hokeyi ve disk savaşı oyunu. Işıltılı
+                            fizik mekanikleriyle reflekslerinizi test edin.</span>
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Air Hockey</span>
+                        <span class="tech-tag">Neon Physics</span>
+                    </div>
+                </div>
+                <div class="project-links-row" style="flex-wrap: wrap; gap: 10px;">
+                    <a href="https://play.google.com/store/apps/details?id=com.ayascell.neonpuckstrike" target="_blank"
+                        class="link-button solid">
+                        <i class="fab fa-google-play"></i> <span class="lang-en">Play Store</span><span
+                            class="lang-tr">Play Store</span>
+                    </a>
+                    <a href="https://play.google.com/apps/testing/com.ayascell.neonpuckstrike" target="_blank"
+                        class="link-button outline">
+                        <i class="fas fa-flask"></i> <span class="lang-en">Web Testing</span><span class="lang-tr">Web
+                            Test Sayfası</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Game 3: Astro Planet Merge -->
+            <div class="project-card glass-card premium-border hover-lift">
+                <div>
+                    <div class="project-header">
+                        <span class="project-badge badge-game">Space Puzzle</span>
+                        <img src="assets/astro-planet-icon.png" alt="Astro Planet Merge Logo" class="app-card-icon">
+                    </div>
+                    <h4>Astro Planet Merge</h4>
+                    <p>
+                        <span class="lang-en">Cosmic merge puzzle game. Drop and combine small celestial bodies to
+                            create massive planets and solar systems.</span>
+                        <span class="lang-tr">Uzay temalı gezegen birleştirme oyunu. Küçük gök cisimlerini düşürerek
+                            devasa gezegenler oluşturma bulmacası.</span>
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Space Puzzle</span>
+                        <span class="tech-tag">Merge Mechanics</span>
+                    </div>
+                </div>
+                <div class="project-links-row">
+                    <a href="https://play.google.com/store/apps/details?id=com.ayascell.astroplanetmerge"
+                        target="_blank" class="link-button solid">
+                        <i class="fab fa-google-play"></i> <span class="lang-en">Play Store</span><span
+                            class="lang-tr">Play Store</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Game 4: Ayakta Kal -->
+            <div class="project-card glass-card premium-border hover-lift">
+                <div>
+                    <div class="project-header">
+                        <span class="project-badge badge-game">Clicker Game</span>
+                        <img src="assets/ayakta-kal-icon.png" alt="Ayakta Kal Logo" class="app-card-icon">
+                    </div>
+                    <h4>Ayakta Kal</h4>
+                    <p>
+                        <span class="lang-en">The simplest, most relaxing, and addictive clicker game to fill your spare
+                            time.</span>
+                        <span class="lang-tr">Boş zamanınızı değerlendirmek için en basit, en rahatlatıcı ve bağımlılık
+                            yapan tıklama oyunu.</span>
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Mobile Game</span>
+                        <span class="tech-tag">Clicker Challenge</span>
+                    </div>
+                </div>
+                <div class="project-links-row">
+                    <a href="https://play.google.com/store/apps/details?id=com.ayascell.ayaktakal" target="_blank"
+                        class="link-button solid">
+                        <i class="fab fa-google-play"></i> <span class="lang-en">Play Store</span><span
+                            class="lang-tr">Play Store</span>
+                    </a>
+                    <!--<a href="https://github.com/AYASCELL" target="_blank" class="link-button outline">
+                        <i class="fab fa-github"></i> <span class="lang-en">GitHub</span><span class="lang-tr">GitHub</span>
+                    </a bu kısmı silme ai tamammı. dursun burası>-->
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer glass">
+        <div class="footer-container">
+            <div class="footer-social-links">
+                <a href="https://github.com/AYASCELL" target="_blank" rel="noopener noreferrer" class="social-icon github-icon" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://ayascell.com/ayas-discussions/" target="_blank" rel="noopener noreferrer" class="social-icon community-icon" title="Topluluk / Community"><i class="fas fa-comments"></i></a>
+                <a href="https://ayascell.com/links.html" target="_blank" rel="noopener noreferrer" class="social-icon links-icon" title="Tüm Linkler"><i class="fas fa-link"></i></a>
+            </div>
+            <div class="footer-links-row">
+                <a href="https://ayascell.com/" target="_blank" rel="noopener noreferrer"><span class="lang-tr">Geliştirici</span><span class="lang-en">Developer</span></a>
+                <span class="footer-divider">•</span>
+                <a href="index.html"><span class="lang-tr">Ayascell Ecosystem</span><span class="lang-en">Ayascell Ecosystem</span></a>
+                <span class="footer-divider">•</span>
+                <a href="https://ayascell.com/AyasOS/" target="_blank" rel="noopener noreferrer"><span class="lang-tr">Ayas OS</span><span class="lang-en">Ayas OS</span></a>
+                <span class="footer-divider">•</span>
+                <a href="https://ayascell.com/ayas-discussions/" target="_blank" rel="noopener noreferrer"><span class="lang-tr">Topluluk</span><span class="lang-en">Community</span></a>
+            </div>
+            <p class="copyright-text">&copy; <span class="current-year"></span> AYASCELL. <span class="lang-tr">Tüm Hakları Saklıdır.</span><span class="lang-en">All Rights Reserved.</span></p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

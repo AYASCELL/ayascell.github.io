@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Önbellek Engelleme / Anlık Güncelleme Başlangıcı -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <!-- Önbellek Engelleme / Anlık Güncelleme Sonu -->
+    <title>PC & Sistem Araçları | AYASCELL Ecosystem</title>
+
+    <link rel="canonical" href="https://ayascell.com/ecosystem/pc.html">
+    <meta name="description" content="AYASCELL PC yazılımları, optimizasyon araçları ve sistem yardımcıları.">
+    <meta name="author" content="AYASCELL">
+    <meta name="robots" content="noindex, follow">
+    <meta name="googlebot" content="noindex, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="AYASCELL">
+    <meta property="og:url" content="https://ayascell.com/ecosystem/pc.html">
+    <meta property="og:title" content="PC & Sistem Araçları | AYASCELL Ecosystem">
+    <meta property="og:description" content="AYASCELL PC yazılımları, optimizasyon araçları ve sistem yardımcıları.">
+    <meta property="og:image" content="https://ayascell.com/assets/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PC & Sistem Araçları | AYASCELL Ecosystem">
+    <meta name="twitter:description" content="AYASCELL PC yazılımları, optimizasyon araçları ve sistem yardımcıları.">
+    <meta name="twitter:image" content="https://ayascell.com/assets/og-image.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "AYASCELL PC & Sistem Yazılımları",
+      "url": "https://ayascell.com/ecosystem/pc.html",
+      "image": "https://ayascell.com/assets/ayascell-logo-dark.png",
+      "publisher": {
+        "@type": "Person",
+        "name": "AYASCELL",
+        "url": "https://ayascell.com/"
+      }
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <canvas id="starfield-canvas"></canvas>
+    <div class="glass-overlay"></div>
+
+    <!-- Header Navigation -->
+    <header class="main-header">
+        <nav class="navbar">
+            <a href="index.html" class="logo-link">
+                <img src="assets/2-Photoroom.png" alt="AYASCELL Logo" class="header-logo-image">
+                <span class="gradient-text header-logo-text glow-text">AYASCELL Ecosystem</span>
+            </a>
+            <div class="menu-toggle" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li>
+                    <a href="index.html">
+                        <i class="fas fa-home"></i>
+                        <span class="lang-en">Home</span>
+                        <span class="lang-tr">Ana Sayfa</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://ayascell.com/">
+                        <i class="fas fa-arrow-left"></i>
+                        <span class="lang-en">Developer</span>
+                        <span class="lang-tr">Geliştirici</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="pc.html" class="active">
+                        <i class="fas fa-desktop"></i>
+                        <span class="lang-en">PC</span>
+                        <span class="lang-tr">PC</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="mobile.html">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span class="lang-en">Mobile</span>
+                        <span class="lang-tr">Mobil</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="games.html">
+                        <i class="fas fa-gamepad"></i>
+                        <span class="lang-en">Games</span>
+                        <span class="lang-tr">Oyunlar</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://ayascell.com/AyasOS/" target="_blank">
+                        <i class="fas fa-compact-disc"></i>
+                        <span class="lang-en">Ayas OS</span>
+                        <span class="lang-tr">Ayas OS</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://ayascell.com/ayas-discussions/" target="_blank">
+                        <i class="fas fa-comments"></i>
+                        <span class="lang-en">Community</span>
+                        <span class="lang-tr">Topluluk</span>
+                    </a>
+                </li>
+                <li>
+                    <button id="lang-toggle" class="lang-btn">
+                        <i class="fas fa-globe"></i> <span id="current-lang">TR</span>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Subpage Banner -->
+    <section class="hero-section subpage-hero">
+        <div class="container">
+            <h1 class="gradient-text mega-title glow-text">
+                <span class="lang-en">PC Apps & Tools</span>
+                <span class="lang-tr">PC & Sistem Araçları</span>
+            </h1>
+            <p class="subtitle">
+                <span class="lang-en">PC optimization utilities, package managers, system scripts, and Linux
+                    tools.</span>
+                <span class="lang-tr">PC optimizasyon yazılımları, paket yöneticileri, sistem betikleri ve Linux
+                    araçları.</span>
+            </p>
+        </div>
+    </section>
+
+    <!-- Desktop Apps Grid -->
+    <section class="container" style="margin-bottom: 80px;">
+        <div class="showcase-grid">
+            <!-- Project 1: Ayascell Browser -->
+            <div class="project-card glass-card premium-border hover-lift">
+                <div>
+                    <div class="project-header">
+                        <span class="project-badge badge-desktop">Web Browser</span>
+                        <img src="assets/ayascell-browser-icon.png" alt="Ayascell Browser Logo" class="app-card-icon">
+                    </div>
+                    <h4>Ayascell Browser</h4>
+                    <p>
+                        <span class="lang-en">Fast, secure, privacy-focused, and lightweight modern web browser
+                            experience.</span>
+                        <span class="lang-tr">Hızlı, güvenli, gizlilik odaklı ve hafif modern web tarayıcısı
+                            deneyimi.</span>
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Web Browser</span>
+                        <span class="tech-tag">Privacy</span>
+                        <span class="tech-tag">Modern UI</span>
+                    </div>
+                </div>
+                <div class="project-links-row">
+                    <a href="https://github.com/AYASCELL/Ayascell-Browser" target="_blank" class="link-button outline">
+                        <i class="fab fa-github"></i> <span class="lang-en">GitHub Repository</span><span
+                            class="lang-tr">GitHub Deposu</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 2: Ayascell PC Optimizer -->
+            <div class="project-card glass-card premium-border hover-lift">
+                <div>
+                    <div class="project-header">
+                        <span class="project-badge badge-desktop">Windows</span>
+                        <img src="assets/pc-optimizer-icon.png" alt="Ayascell PC Optimizer Logo" class="app-card-icon">
+                    </div>
+                    <h4>Ayascell PC Optimizer</h4>
+                    <p>
+                        <span class="lang-en">Advanced Windows PC cleaner and optimizer tool. Offers RAM flushing, junk
+                            file removal, startup optimization, and disk speedup.</span>
+                        <span class="lang-tr">Windows sistemler için gelişmiş temizleyici ve hızlandırıcı. Bellek
+                            boşaltma, gereksiz dosya temizleme ve sistem optimizasyonu sağlar.</span>
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">C#</span>
+                        <span class="tech-tag">.NET Framework</span>
+                        <span class="tech-tag">Windows API</span>
+                    </div>
+                </div>
+                <div class="project-links-row">
+                    <a href="https://github.com/AYASCELL/AYASCELL-PC-Optimizer" target="_blank"
+                        class="link-button outline">
+                        <i class="fab fa-github"></i> <span class="lang-en">GitHub Repository</span><span
+                            class="lang-tr">GitHub Deposu</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 3: AUR Store -->
+            <div class="project-card glass-card premium-border hover-lift">
+                <div>
+                    <div class="project-header">
+                        <span class="project-badge badge-desktop">Linux</span>
+                        <i class="fas fa-box-open glow-text" style="font-size: 1.5em; color: var(--neon-yellow);"></i>
+                    </div>
+                    <h4>AUR Store</h4>
+                    <p>
+                        <span class="lang-en">Graphical package manager for Arch Linux users. Browse, search, and
+                            install software from the Arch User Repository seamlessly.</span>
+                        <span class="lang-tr">Arch Linux kullanıcıları için geliştirilmiş modern paket yöneticisi. AUR
+                            depolarındaki yazılımları pratikçe arama ve yükleme imkanı.</span>
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Arch Linux</span>
+                        <span class="tech-tag">AUR Helper</span>
+                    </div>
+                </div>
+                <div class="project-links-row">
+                    <a href="https://github.com/AYASCELL/AUR-STORE" target="_blank" class="link-button outline">
+                        <i class="fab fa-github"></i> <span class="lang-en">GitHub Repository</span><span
+                            class="lang-tr">GitHub Deposu</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 3: AYAS OS APT Repo -->
+            <div class="project-card glass-card premium-border hover-lift">
+                <div>
+                    <div class="project-header">
+                        <span class="project-badge badge-os">Repository</span>
+                        <i class="fas fa-server glow-text" style="font-size: 1.5em; color: var(--light-gold);"></i>
+                    </div>
+                    <h4>AYAS OS APT Repository</h4>
+                    <p>
+                        <span class="lang-en">Official Debian/Ubuntu APT repository for Ayas OS packages hosted via
+                            GitHub Pages infrastructure.</span>
+                        <span class="lang-tr">Ayas OS paketlerinin sunulduğu Debian/Ubuntu uyumlu resmi APT paket
+                            deposu.</span>
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Debian</span>
+                        <span class="tech-tag">APT / Dpkg</span>
+                        <span class="tech-tag">Shell Script</span>
+                    </div>
+                </div>
+                <div class="project-links-row">
+                    <a href="https://github.com/AYASCELL/ayasos-repo" target="_blank" class="link-button outline">
+                        <i class="fab fa-github"></i> <span class="lang-en">GitHub Repository</span><span
+                            class="lang-tr">GitHub Deposu</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 4: AyasFetch -->
+            <div class="project-card glass-card premium-border hover-lift">
+                <div>
+                    <div class="project-header">
+                        <span class="project-badge badge-desktop">CLI Tool</span>
+                        <i class="fas fa-terminal glow-text" style="font-size: 1.5em; color: var(--neon-green);"></i>
+                    </div>
+                    <h4>AyasFetch</h4>
+                    <p>
+                        <span class="lang-en">Fast and lightweight terminal system information tool (neofetch
+                            alternative) displaying OS and hardware stats.</span>
+                        <span class="lang-tr">Terminal üzerinde sistem özelliklerini, donanım bilgilerini ve ayarlarını
+                            gösteren hızlı bilgi aracı.</span>
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Bash / Shell</span>
+                        <span class="tech-tag">Linux System Info</span>
+                    </div>
+                </div>
+                <div class="project-links-row">
+                    <a href="https://github.com/AYASCELL/ayasfetch" target="_blank" class="link-button outline">
+                        <i class="fab fa-github"></i> <span class="lang-en">GitHub Repository</span><span
+                            class="lang-tr">GitHub Deposu</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 5: Sistem Yönetimi -->
+            <div class="project-card glass-card premium-border hover-lift">
+                <div>
+                    <div class="project-header">
+                        <span class="project-badge badge-desktop">Windows</span>
+                        <i class="fas fa-terminal glow-text" style="font-size: 1.5em; color: var(--neon-blue);"></i>
+                    </div>
+                    <h4>Sistem Yönetimi</h4>
+                    <p>
+                        <span class="lang-en">Comprehensive Windows batch toolkit unifying system maintenance, cleanup, network optimization, repair, and automation into a single solution.</span>
+                        <span class="lang-tr">Windows sistemler için geliştirilmiş; bakım, temizlik, ağ optimizasyonu, onarım ve otomasyon işlemlerini tek çatı altında toplayan kapsamlı yönetim aracı.</span>
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Windows</span>
+                        <span class="tech-tag">Batch Script (.bat)</span>
+                    </div>
+                </div>
+                <div class="project-links-row">
+                    <a href="https://github.com/AYASCELL/sistem-yonetimi" target="_blank" class="link-button outline">
+                        <i class="fab fa-github"></i> <span class="lang-en">GitHub Repository</span><span
+                            class="lang-tr">GitHub Deposu</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 6: UpdaterService --
+            <div class="project-card glass-card premium-border hover-lift">
+                <div>
+                    <div class="project-header">
+                        <span class="project-badge badge-desktop">Background Service</span>
+                        <i class="fas fa-sync-alt glow-text" style="font-size: 1.5em; color: var(--neon-orange);"></i>
+                    </div>
+                    <h4>UpdaterService</h4>
+                    <p>
+                        <span class="lang-en">Background updating service managing seamless silent updates for AYASCELL applications and repositories.</span>
+                        <span class="lang-tr">AYASCELL uygulamalarının ve depolarının arka planda sessiz ve sorunsuz güncellenmesini sağlayan servis.</span>
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">C# / System Service</span>
+                        <span class="tech-tag">Auto-Update</span>
+                    </div>
+                </div>
+                <div class="project-links-row">
+                    <a href="https://github.com/AYASCELL/updaterservice" target="_blank" class="link-button outline">
+                        <i class="fab fa-github"></i> <span class="lang-en">GitHub Repository</span><span class="lang-tr">GitHub Deposu</span>
+                    </a>
+                </div>
+            </div>-->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer glass">
+        <div class="footer-container">
+            <div class="footer-social-links">
+                <a href="https://github.com/AYASCELL" target="_blank" rel="noopener noreferrer" class="social-icon github-icon" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://ayascell.com/ayas-discussions/" target="_blank" rel="noopener noreferrer" class="social-icon community-icon" title="Topluluk / Community"><i class="fas fa-comments"></i></a>
+                <a href="https://ayascell.com/links.html" target="_blank" rel="noopener noreferrer" class="social-icon links-icon" title="Tüm Linkler"><i class="fas fa-link"></i></a>
+            </div>
+            <div class="footer-links-row">
+                <a href="https://ayascell.com/" target="_blank" rel="noopener noreferrer"><span class="lang-tr">Geliştirici</span><span class="lang-en">Developer</span></a>
+                <span class="footer-divider">•</span>
+                <a href="index.html"><span class="lang-tr">Ayascell Ecosystem</span><span class="lang-en">Ayascell Ecosystem</span></a>
+                <span class="footer-divider">•</span>
+                <a href="https://ayascell.com/AyasOS/" target="_blank" rel="noopener noreferrer"><span class="lang-tr">Ayas OS</span><span class="lang-en">Ayas OS</span></a>
+                <span class="footer-divider">•</span>
+                <a href="https://ayascell.com/ayas-discussions/" target="_blank" rel="noopener noreferrer"><span class="lang-tr">Topluluk</span><span class="lang-en">Community</span></a>
+            </div>
+            <p class="copyright-text">&copy; <span class="current-year"></span> AYASCELL. <span class="lang-tr">Tüm Hakları Saklıdır.</span><span class="lang-en">All Rights Reserved.</span></p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

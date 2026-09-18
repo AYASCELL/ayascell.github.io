@@ -705,6 +705,11 @@ body {
     box-shadow: 0 0 30px rgba(251, 122, 36, 0.3);
 }
 
+.hover-glow-vi3code:hover {
+    border-color: #FFFFFF;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.4), 0 0 15px rgba(0, 240, 255, 0.25);
+}
+
 .hover-glow-postgres:hover {
     border-color: #336791;
     box-shadow: 0 0 30px rgba(51, 103, 145, 0.3);
@@ -2819,6 +2824,7 @@ body.show-en div.lang-en, body.show-en p.lang-en, body.show-en h1.lang-en, body.
 .hover-glow-androidstudio { border-top: 2px solid #3DDC84 !important; }
 .hover-glow-ssms { border-top: 2px solid #CC292B !important; }
 .hover-glow-xampp { border-top: 2px solid #FB7A24 !important; }
+.hover-glow-vi3code { border-top: 2px solid #FFFFFF !important; }
 
 .hover-glow-orange { border-top: 2px solid #FF5722 !important; }
 .hover-glow-yellow { border-top: 2px solid #FFDF00 !important; }

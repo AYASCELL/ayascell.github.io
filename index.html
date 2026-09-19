@@ -22,6 +22,9 @@
     <meta name="robots" content="index, follow">
     <meta name="google-site-verification" content="googlecb83fe985b89919e" />
 
+    <!-- Google Search Snippet Thumbnail & Open Graph -->
+    <meta name="thumbnail" content="https://ayascell.com/assets/ayascell-logo-dark.png">
+
     <!-- Open Graph / Sosyal Medya -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="AYASCELL">
@@ -29,9 +32,20 @@
     <meta property="og:title" content="AYASCELL | Full Stack Developer">
     <meta property="og:description"
         content="Kendi halinde kod yazan, iz bırakan dijital deneyimler ve açık kaynaklı projeler.">
+    <!-- 1:1 Kare Logo (Arama motoru snippet ve önizlemeleri için öncelikli) -->
+    <meta property="og:image" content="https://ayascell.com/assets/ayascell-logo-dark.png">
+    <meta property="og:image:secure_url" content="https://ayascell.com/assets/ayascell-logo-dark.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+    <meta property="og:image:alt" content="AYASCELL Logo">
+    <!-- 1.91:1 Geniş Banner (Sosyal medya paylaşımları için) -->
     <meta property="og:image" content="https://ayascell.com/assets/og-image.png">
+    <meta property="og:image:secure_url" content="https://ayascell.com/assets/og-image.png">
+    <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="AYASCELL Full Stack Developer">
     <meta property="og:locale" content="tr_TR">
 
     <!-- Twitter Card -->
@@ -40,7 +54,7 @@
     <meta name="twitter:title" content="AYASCELL | Full Stack Developer">
     <meta name="twitter:description"
         content="Kendi halinde kod yazan, iz bırakan dijital deneyimler ve açık kaynaklı projeler.">
-    <meta name="twitter:image" content="https://ayascell.com/assets/og-image.png">
+    <meta name="twitter:image" content="https://ayascell.com/assets/ayascell-logo-dark.png">
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -72,6 +86,7 @@
           "@id": "https://ayascell.com/#website",
           "url": "https://ayascell.com/",
           "name": "AYASCELL",
+          "image": "https://ayascell.com/assets/ayascell-logo-dark.png",
           "publisher": {
             "@id": "https://ayascell.com/#person"
           },
@@ -97,6 +112,27 @@
               "url": "https://ayascell.com/links.html"
             }
           ]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://ayascell.com/#webpage",
+          "url": "https://ayascell.com/",
+          "name": "AYASCELL | Full Stack Developer",
+          "isPartOf": {
+            "@id": "https://ayascell.com/#website"
+          },
+          "about": {
+            "@id": "https://ayascell.com/#person"
+          },
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "@id": "https://ayascell.com/#primaryimage",
+            "url": "https://ayascell.com/assets/ayascell-logo-dark.png",
+            "contentUrl": "https://ayascell.com/assets/ayascell-logo-dark.png",
+            "width": 512,
+            "height": 512,
+            "caption": "AYASCELL Logo"
+          }
         }
       ]
     }
@@ -189,7 +225,7 @@
             <div class="projects-grid">
 
                 <!-- 1. AYASCELL PC OPTIMIZER -->
-                <div class="project-card hover-lift">
+                <div class="project-card hover-lift" data-nosnippet>
                     <div class="project-card-top">
                         <div class="project-brand-icon">
                             <img src="assets/pc-optimizer-icon.png" alt="Ayascell PC Optimizer Logo" class="project-brand-img">
@@ -243,7 +279,7 @@
                 </div>
 
                 <!-- 3. AYASCELL BROWSER -->
-                <div class="project-card hover-lift">
+                <div class="project-card hover-lift" data-nosnippet>
                     <div class="project-card-top">
                         <div class="project-brand-icon">
                             <img src="assets/ayascell-browser-icon.png" alt="Ayascell Browser Logo" class="project-brand-img">

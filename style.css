@@ -2622,6 +2622,21 @@ body.show-en div.lang-en, body.show-en p.lang-en, body.show-en h1.lang-en, body.
     font-weight: 600;
 }
 
+.flagship-status-pill.status-paused {
+    background: rgba(245, 158, 11, 0.12);
+    border: 1px solid rgba(245, 158, 11, 0.45);
+    color: #FBBF24;
+}
+
+.paused-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #FBBF24;
+    box-shadow: 0 0 8px rgba(251, 191, 36, 0.8);
+    display: inline-block;
+}
+
 .flagship-title {
     font-size: 3em;
     font-weight: 800;

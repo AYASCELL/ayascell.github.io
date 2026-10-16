@@ -416,6 +416,7 @@ body {
 }
 
 .badge-desktop { background: rgba(0, 216, 255, 0.15); color: #00D8FF; border: 1px solid rgba(0, 216, 255, 0.3); }
+.badge-web { background: rgba(0, 216, 255, 0.15); color: #00D8FF; border: 1px solid rgba(0, 216, 255, 0.3); }
 .badge-mobile { background: rgba(255, 87, 34, 0.15); color: #FF5722; border: 1px solid rgba(255, 87, 34, 0.3); }
 .badge-game { background: rgba(156, 39, 176, 0.15); color: #e040fb; border: 1px solid rgba(156, 39, 176, 0.3); }
 .badge-os { background: rgba(212, 175, 55, 0.15); color: var(--light-gold); border: 1px solid var(--border-color); }

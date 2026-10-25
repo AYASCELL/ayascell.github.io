@@ -1558,36 +1558,6 @@ body.show-en div.lang-en, body.show-en p.lang-en, body.show-en h1.lang-en, body.
     box-shadow: 0 0 15px rgba(23, 147, 209, 0.4);
 }
 
-/* Pika OS (Crimson / Magenta Cyber Workstation) */
-.os-card-pika {
-    background: 
-        linear-gradient(rgba(215, 10, 83, 0.035) 1px, transparent 1px) 0 0 / 22px 22px,
-        linear-gradient(90deg, rgba(215, 10, 83, 0.035) 1px, transparent 1px) 0 0 / 22px 22px,
-        radial-gradient(circle at 100% 0%, rgba(215, 10, 83, 0.25) 0%, transparent 60%),
-        radial-gradient(circle at 0% 100%, rgba(215, 10, 83, 0.12) 0%, transparent 50%),
-        linear-gradient(160deg, #1c0613 0%, #080206 100%);
-    border: 1px solid rgba(215, 10, 83, 0.35);
-    border-left: 6px solid #D70A53;
-    border-top: 1px solid rgba(215, 10, 83, 0.5);
-}
-.os-card-pika:hover {
-    border-color: rgba(215, 10, 83, 0.75);
-    box-shadow: 0 24px 55px rgba(0, 0, 0, 0.85), 0 0 35px rgba(215, 10, 83, 0.35);
-}
-.os-card-pika .pika-brand {
-    background: rgba(215, 10, 83, 0.12);
-    border-color: rgba(215, 10, 83, 0.4);
-    box-shadow: 0 0 20px rgba(215, 10, 83, 0.25);
-}
-.os-card-pika .spec-icon {
-    color: #D70A53;
-}
-.os-card-pika .os-screenshot-wrapper:hover .zoom-hint-badge {
-    background: rgba(215, 10, 83, 0.35);
-    border-color: #D70A53;
-    color: #fff;
-    box-shadow: 0 0 15px rgba(215, 10, 83, 0.4);
-}
 
 /* Windows 11 Pro (Windows Blue Cyber Workstation) */
 .os-card-windows {
@@ -1681,12 +1651,6 @@ body.show-en div.lang-en, body.show-en p.lang-en, body.show-en h1.lang-en, body.
     transform: scale(1.06);
 }
 
-.pika-round-logo {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    object-fit: contain;
-}
 
 .os-title-meta {
     display: flex;

@@ -65,7 +65,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=20261115">
+    <link rel="stylesheet" href="style.css?v=20261115_2">
 </head>
 
 <body class="setup-page-body">
@@ -90,7 +90,6 @@
                 <li><a href="https://ayascell.com/ecosystem/" target="_blank"><i class="fas fa-cubes nav-icon"></i><span class="lang-tr">Ekosistem</span><span class="lang-en">Ecosystem</span></a></li>
                 <li><a href="https://ayasprog.ayascell.com/" target="_blank"><i class="fas fa-boxes nav-icon"></i><span class="lang-tr">AyasProg</span><span class="lang-en">AyasProg</span></a></li>
                 <li><a href="https://ayastools.ayascell.com/" target="_blank"><i class="fas fa-tools nav-icon"></i><span class="lang-tr">AyasTools</span><span class="lang-en">AyasTools</span></a></li>
-                <li><a href="contributors.html" class="active"><i class="fas fa-hands-helping nav-icon"></i><span class="lang-tr">Katkıda Bulunanlar</span><span class="lang-en">Contributors</span></a></li>
                 <li><a href="links.html" class="contact-button neon-btn"><i class="fas fa-link nav-icon"></i><span class="lang-tr">Tüm Linkler</span><span class="lang-en">All Links</span></a></li>
                 <li>
                     <button id="lang-toggle" class="lang-btn">
@@ -104,8 +103,8 @@
     <!-- Main Container -->
     <main class="container setup-page-container">
 
-        <!-- 1. BAŞLIK & ÖZET -->
-        <header class="setup-page-header">
+        <!-- Sayfa Başlığı -->
+        <header class="setup-page-header" style="margin-bottom: 35px;">
             <div class="setup-badge-pill">
                 <span class="pulse-indicator"></span>
                 <span class="lang-tr">Topluluk &amp; Emek</span>
@@ -116,218 +115,159 @@
                 <span class="lang-en">Contributors</span>
             </h1>
             <p class="setup-main-desc">
-                <span class="lang-tr">AYASCELL ekosistemini büyüten, sunucu altyapımıza güç katan ve açık kaynak projelerimize destek veren değerli dostlarımız ve geliştiriciler.</span>
-                <span class="lang-en">Valuable community partners and developers who strengthen our server infrastructure and help build the AYASCELL ecosystem.</span>
+                <span class="lang-tr">AYASCELL ekosistemine, sunucu altyapımıza ve açık kaynak projelerimize destek veren dostlarımız ve geliştiriciler.</span>
+                <span class="lang-en">Community partners and developers supporting AYASCELL server infrastructure and open source projects.</span>
             </p>
         </header>
 
-        <!-- Özet İstatistik Çubuğu -->
-        <div class="contributors-stats-bar">
-            <div class="contributor-stat-box">
-                <div class="contributor-stat-value"><i class="fas fa-robot" style="color: #10B981;"></i> 7/24</div>
-                <div class="contributor-stat-label">
-                    <span class="lang-tr">Ücretsiz Sunucu Bot Desteği</span>
-                    <span class="lang-en">Free Server Bot Support</span>
-                </div>
-            </div>
-            <div class="contributor-stat-box">
-                <div class="contributor-stat-value"><i class="fas fa-code-branch"></i> Open</div>
-                <div class="contributor-stat-label">
-                    <span class="lang-tr">Açık Kaynak Katkılarına Açık</span>
-                    <span class="lang-en">Open to Code Contributions</span>
-                </div>
-            </div>
-            <div class="contributor-stat-box">
-                <div class="contributor-stat-value"><i class="fas fa-heart" style="color: #EC4899;"></i> %100</div>
-                <div class="contributor-stat-label">
-                    <span class="lang-tr">Topluluk Odaklı Dayanışma</span>
-                    <span class="lang-en">Community-Driven Spirit</span>
-                </div>
-            </div>
-        </div>
+        <!-- Çoklu Sütun Kart Izgarası (Oyunlar Sayfası Düzeni) -->
+        <section style="margin-bottom: 60px;">
+            <div class="contrib-showcase-grid">
 
-        <!-- 2. SUNUCU & ALTYAPI DESTEĞİ -->
-        <section class="setup-section-block">
-            <div class="section-badge-header">
-                <div class="sub-badge" style="color: #6EE7B7; border-color: rgba(16, 185, 129, 0.3); background: rgba(16, 185, 129, 0.08);">
-                    <i class="fas fa-server"></i>
-                    <span class="lang-tr">Sunucu &amp; Altyapı Desteği</span>
-                    <span class="lang-en">Server &amp; Infrastructure Support</span>
-                </div>
-                <h2 class="sub-section-title gradient-text glow-text">
-                    <span class="lang-tr">Topluluk Altyapı Ortaklarımız</span>
-                    <span class="lang-en">Community Infrastructure Partners</span>
-                </h2>
-                <p class="sub-section-desc">
-                    <span class="lang-tr">Discord topluluğumuzun düzenini ve etkileşimini güçlendiren bot ve altyapı destekçilerimiz.</span>
-                    <span class="lang-en">Bot and infrastructure supporters powering moderation and engagement across our Discord community.</span>
-                </p>
-            </div>
-
-            <div class="contributors-featured-grid">
-                <!-- KOLU BOT KARTI (Yeşil Tema) -->
-                <article class="contributor-card emerald-theme">
-                    <div class="contributor-card-top">
-                        <div class="contributor-identity">
-                            <div class="contributor-avatar-wrap">
-                                <img src="assets/kolu-bot-logo.png" alt="Kolu Bot Logo">
-                            </div>
-                            <div>
-                                <div class="contributor-name-row">
-                                    <h3 class="contributor-name">Kolu Bot</h3>
-                                </div>
-                                <span class="contributor-role-badge">
-                                    <i class="fas fa-shield-alt"></i>
-                                    <span class="lang-tr">Ücretsiz Discord Bot Sağlayıcısı</span>
-                                    <span class="lang-en">Free Discord Bot Provider</span>
-                                </span>
-                            </div>
+                <!-- 1. Kolu Bot -->
+                <div class="contrib-card glass-card premium-border hover-lift emerald-accent">
+                    <div>
+                        <div class="contrib-header">
+                            <span class="contrib-badge badge-emerald">
+                                <i class="fas fa-robot"></i>
+                                <span class="lang-tr">Sunucu Botu</span>
+                                <span class="lang-en">Discord Bot</span>
+                            </span>
+                            <img src="assets/kolu-bot-logo.png" alt="Kolu Bot Logo" class="contrib-card-icon">
                         </div>
-
-                        <div class="contributor-status-pill">
-                            <span class="emerald-pulse-dot"></span>
-                            <span class="lang-tr">Çevrimiçi • %99.9 Uptime</span>
-                            <span class="lang-en">Online • 99.9% Uptime</span>
+                        <h4>Kolu Bot</h4>
+                        <p>
+                            <span class="lang-tr">AYASCELL Discord sunucumuza ücretsiz bot altyapısı sağlıyor. Gelişmiş moderasyon, eğlence komutları, düşük gecikme ve özelleştirilebilir yönetim araçlarıyla topluluğu güçlendirir.</span>
+                            <span class="lang-en">Provides free Discord bot infrastructure for our AYASCELL server. Empowers the community with advanced moderation, fun commands, low latency, and customizable tools.</span>
+                        </p>
+                        <div class="contrib-tags">
+                            <span class="contrib-tag">7/24 Aktif</span>
+                            <span class="contrib-tag">%99.9 Uptime</span>
+                            <span class="contrib-tag">Moderasyon</span>
+                            <span class="contrib-tag">Eğlence</span>
                         </div>
                     </div>
-
-                    <p class="contributor-desc">
-                        <span class="lang-tr">AYASCELL Discord sunucumuza ücretsiz olarak bot altyapısı sağlayan değerli destekçimiz. Sunucunuz için gelişmiş moderasyon, eğlence ve yönetim araçları sunarak düşük gecikme ve özelleştirilebilir yapısıyla topluluk deneyimini bir üst seviyeye taşır.</span>
-                        <span class="lang-en">Our generous partner providing free Discord bot infrastructure for the AYASCELL community server. Equipped with advanced moderation, entertainment commands, low latency, and customizable management tools to elevate server engagement.</span>
-                    </p>
-
-                    <div class="contributor-features-list">
-                        <span class="contributor-tag"><i class="fas fa-shield-alt"></i> <span class="lang-tr">Gelişmiş Moderasyon</span><span class="lang-en">Advanced Moderation</span></span>
-                        <span class="contributor-tag"><i class="fas fa-gamepad"></i> <span class="lang-tr">Eğlence Komutları</span><span class="lang-en">Fun Commands</span></span>
-                        <span class="contributor-tag"><i class="fas fa-bolt"></i> <span class="lang-tr">Hızlı &amp; Güvenilir</span><span class="lang-en">Fast &amp; Reliable</span></span>
-                        <span class="contributor-tag"><i class="fas fa-sliders-h"></i> <span class="lang-tr">Özelleştirilebilir</span><span class="lang-en">Customizable</span></span>
-                        <span class="contributor-tag"><i class="fas fa-chart-line"></i> <span class="lang-tr">Detaylı İstatistikler</span><span class="lang-en">Detailed Analytics</span></span>
-                        <span class="contributor-tag"><i class="fas fa-globe"></i> <span class="lang-tr">Çoklu Dil Desteği</span><span class="lang-en">Multi-Language</span></span>
-                    </div>
-
-                    <div class="contributor-actions">
-                        <a href="https://kolu-bot.github.io/" target="_blank" rel="noopener noreferrer" class="btn-emerald-solid">
+                    <div class="contrib-links-row">
+                        <a href="https://kolu-bot.github.io/" target="_blank" rel="noopener noreferrer" class="contrib-btn solid-emerald">
                             <i class="fas fa-globe"></i>
-                            <span class="lang-tr">Kolu Bot Sitesi</span>
-                            <span class="lang-en">Visit Website</span>
+                            <span class="lang-tr">Web Sitesi</span>
+                            <span class="lang-en">Website</span>
                         </a>
-                        <a href="https://discord.com/api/oauth2/authorize?client_id=1538196651812851800&permissions=8&scope=bot%20applications.commands" target="_blank" rel="noopener noreferrer" class="btn-emerald-outline">
+                        <a href="https://discord.com/api/oauth2/authorize?client_id=1538196651812851800&permissions=8&scope=bot%20applications.commands" target="_blank" rel="noopener noreferrer" class="contrib-btn outline-emerald">
                             <i class="fas fa-plus"></i>
-                            <span class="lang-tr">Sunucuna Ekle</span>
-                            <span class="lang-en">Add to Server</span>
+                            <span class="lang-tr">Ekle</span>
+                            <span class="lang-en">Add</span>
                         </a>
-                        <a href="https://discord.gg/8ZDaQMDAEs" target="_blank" rel="noopener noreferrer" class="btn-emerald-outline">
+                        <a href="https://discord.gg/8ZDaQMDAEs" target="_blank" rel="noopener noreferrer" class="contrib-btn outline-emerald" title="Kolu Bot Discord">
                             <i class="fab fa-discord"></i>
-                            <span class="lang-tr">Destek Sunucusu</span>
-                            <span class="lang-en">Support Server</span>
                         </a>
                     </div>
-                </article>
-            </div>
-        </section>
-
-        <!-- 3. PROJE & AÇIK KAYNAK KATKIDA BULUNANLAR -->
-        <section class="setup-section-block">
-            <div class="section-badge-header">
-                <div class="sub-badge">
-                    <i class="fas fa-code"></i>
-                    <span class="lang-tr">Projeler &amp; Açık Kaynak</span>
-                    <span class="lang-en">Projects &amp; Open Source</span>
                 </div>
-                <h2 class="sub-section-title gradient-text glow-text">
-                    <span class="lang-tr">Proje Katkıda Bulunanları</span>
-                    <span class="lang-en">Project Contributors</span>
-                </h2>
-                <p class="sub-section-desc">
-                    <span class="lang-tr">Ayas OS, AyasProg, AyasTools, Ezan Vakti ve açık kaynak depolarımıza kod, fikir, çeviri veya test desteği veren isimler burada listelenir.</span>
-                    <span class="lang-en">Developers and testers contributing code, ideas, translations, or QA feedback across Ayas OS, AyasProg, AyasTools, and our repositories are listed here.</span>
-                </p>
-            </div>
 
-            <div class="contributors-grid">
-                <!--
-                YENİ PROJE KATKIDA BULUNANI EKLEME ŞABLONU:
-                <article class="contributor-card">
-                    <div class="contributor-card-top">
-                        <div class="contributor-identity">
-                            <div class="contributor-avatar-wrap">
-                                <img src="assets/avatar.png" alt="İsim">
-                            </div>
-                            <div>
-                                <div class="contributor-name-row">
-                                    <h3 class="contributor-name">Geliştirici Adı</h3>
-                                </div>
-                                <span class="contributor-role-badge">
-                                    <i class="fas fa-code"></i>
-                                    <span class="lang-tr">Katkı Alanı</span>
-                                    <span class="lang-en">Contribution Role</span>
-                                </span>
+                <!-- 2. Kod & Proje Katkıları -->
+                <div class="contrib-card glass-card premium-border hover-lift">
+                    <div>
+                        <div class="contrib-header">
+                            <span class="contrib-badge badge-gold">
+                                <i class="fas fa-code-branch"></i>
+                                <span class="lang-tr">Açık Kaynak</span>
+                                <span class="lang-en">Open Source</span>
+                            </span>
+                            <div class="contrib-card-icon">
+                                <i class="fab fa-github"></i>
                             </div>
                         </div>
+                        <h4>
+                            <span class="lang-tr">Kod Katkıda Bulunanlar</span>
+                            <span class="lang-en">Code Contributors</span>
+                        </h4>
+                        <p>
+                            <span class="lang-tr">Ayas OS, AyasProg, AyasTools veya GitHub depolarımıza Pull Request, hata çözümü ve yeni özellik katkısı yapan geliştiriciler burada listelenir.</span>
+                            <span class="lang-en">Developers contributing Pull Requests, bug fixes, and new features to Ayas OS, AyasProg, AyasTools, or our GitHub repositories are featured here.</span>
+                        </p>
+                        <div class="contrib-tags">
+                            <span class="contrib-tag">Ayas OS</span>
+                            <span class="contrib-tag">AyasProg</span>
+                            <span class="contrib-tag">AyasTools</span>
+                            <span class="contrib-tag">GitHub PR</span>
+                        </div>
                     </div>
-                    <p class="contributor-desc">Katkı açıklaması.</p>
-                    <div class="contributor-features-list">
-                        <span class="contributor-tag">Proje Adı</span>
+                    <div class="contrib-links-row">
+                        <a href="https://github.com/AYASCELL" target="_blank" rel="noopener noreferrer" class="contrib-btn solid-gold">
+                            <i class="fab fa-github"></i>
+                            <span class="lang-tr">GitHub'da Katkı Yap</span>
+                            <span class="lang-en">Contribute on GitHub</span>
+                        </a>
                     </div>
-                </article>
+                </div>
+
+                <!-- 3. Beta Test & Topluluk Desteği -->
+                <div class="contrib-card glass-card premium-border hover-lift">
+                    <div>
+                        <div class="contrib-header">
+                            <span class="contrib-badge badge-cyan">
+                                <i class="fas fa-flask"></i>
+                                <span class="lang-tr">Topluluk</span>
+                                <span class="lang-en">Community</span>
+                            </span>
+                            <div class="contrib-card-icon" style="color: #00D8FF;">
+                                <i class="fas fa-users"></i>
+                            </div>
+                        </div>
+                        <h4>
+                            <span class="lang-tr">Test &amp; Topluluk Desteği</span>
+                            <span class="lang-en">Testing &amp; Community</span>
+                        </h4>
+                        <p>
+                            <span class="lang-tr">Ezan Vakti ve diğer mobil uygulamalarımızın kapalı test sürecinde geri bildirim, çeviri veya fikir desteği sunan topluluk üyelerimiz burada yer alır.</span>
+                            <span class="lang-en">Community members supporting our closed beta tests, translations, and product feedback across Ezan Vakti and our mobile apps are listed here.</span>
+                        </p>
+                        <div class="contrib-tags">
+                            <span class="contrib-tag">Kapalı Test</span>
+                            <span class="contrib-tag">Geri Bildirim</span>
+                            <span class="contrib-tag">Çeviri</span>
+                        </div>
+                    </div>
+                    <div class="contrib-links-row">
+                        <a href="https://discord.gg/aAtRK96qVn" target="_blank" rel="noopener noreferrer" class="contrib-btn outline">
+                            <i class="fab fa-discord"></i>
+                            <span class="lang-tr">Discord</span>
+                            <span class="lang-en">Discord</span>
+                        </a>
+                        <a href="https://ayascell.com/ayas-discussions/" target="_blank" rel="noopener noreferrer" class="contrib-btn outline">
+                            <i class="fas fa-comments"></i>
+                            <span class="lang-tr">Discussions</span>
+                            <span class="lang-en">Discussions</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!--
+                YENİ KATKIDA BULUNAN KARTI ŞABLONU:
+                <div class="contrib-card glass-card premium-border hover-lift">
+                    <div>
+                        <div class="contrib-header">
+                            <span class="contrib-badge badge-gold">
+                                <i class="fas fa-code"></i>
+                                <span class="lang-tr">Katkı Alanı</span>
+                                <span class="lang-en">Role</span>
+                            </span>
+                            <img src="assets/avatar.png" alt="Logo" class="contrib-card-icon">
+                        </div>
+                        <h4>İsim / Proje</h4>
+                        <p>Kısa açıklama.</p>
+                        <div class="contrib-tags">
+                            <span class="contrib-tag">Etiket</span>
+                        </div>
+                    </div>
+                    <div class="contrib-links-row">
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="contrib-btn solid-gold">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
                 -->
 
-                <div class="contributor-open-slot">
-                    <div class="contributor-open-icon">
-                        <i class="fas fa-code-branch"></i>
-                    </div>
-                    <h3 style="font-size: 1.35em; color: #fff; margin: 0;">
-                        <span class="lang-tr">Kod &amp; Özellik Katkısı</span>
-                        <span class="lang-en">Code &amp; Feature Contributions</span>
-                    </h3>
-                    <p style="color: #94A3B8; font-size: 0.96em; max-width: 420px; line-height: 1.6; margin: 0;">
-                        <span class="lang-tr">GitHub depolarımıza Pull Request göndererek, hata bildirerek veya yeni fikirler üreterek AYASCELL projelerinde adınızın burada yer almasını sağlayabilirsiniz.</span>
-                        <span class="lang-en">Submit Pull Requests, report bugs, or propose features on our GitHub repositories to earn your spot on the AYASCELL contributors wall.</span>
-                    </p>
-                </div>
-
-                <div class="contributor-open-slot">
-                    <div class="contributor-open-icon">
-                        <i class="fas fa-flask"></i>
-                    </div>
-                    <h3 style="font-size: 1.35em; color: #fff; margin: 0;">
-                        <span class="lang-tr">Beta Test &amp; Topluluk Desteği</span>
-                        <span class="lang-en">Beta Testing &amp; Community Support</span>
-                    </h3>
-                    <p style="color: #94A3B8; font-size: 0.96em; max-width: 420px; line-height: 1.6; margin: 0;">
-                        <span class="lang-tr">Kapalı test programlarımıza katılarak, geri bildirim vererek veya çeviri/dokümantasyon iyileştirmeleriyle ekosistemin gelişimine destek olabilirsiniz.</span>
-                        <span class="lang-en">Join our closed beta programs, share feedback, or assist with translations and documentation to help refine our apps and tools.</span>
-                    </p>
-                </div>
-            </div>
-
-            <!-- Katkı Çağrısı (CTA) -->
-            <div class="contributors-cta-card">
-                <h3 class="gradient-text glow-text" style="font-size: 1.9em; margin-bottom: 10px;">
-                    <span class="lang-tr">Siz de Katkıda Bulunmak İster misiniz?</span>
-                    <span class="lang-en">Want to Contribute to AYASCELL?</span>
-                </h3>
-                <p style="max-width: 680px; margin: 0 auto; color: #CBD5E1; line-height: 1.6;">
-                    <span class="lang-tr">İster bir satır kod, ister sunucu desteği, ister hata geri bildirimi... AYASCELL ekosistemini birlikte daha ileriye taşıyalım.</span>
-                    <span class="lang-en">Whether it's a line of code, server support, or bug feedback — let's build the future of the AYASCELL ecosystem together.</span>
-                </p>
-                <div class="contributors-cta-buttons">
-                    <a href="https://github.com/AYASCELL" target="_blank" rel="noopener noreferrer" class="link-button solid gold-gradient">
-                        <i class="fab fa-github"></i>
-                        <span class="lang-tr">GitHub'da Katkıda Bulun</span>
-                        <span class="lang-en">Contribute on GitHub</span>
-                    </a>
-                    <a href="https://discord.gg/aAtRK96qVn" target="_blank" rel="noopener noreferrer" class="link-button outline glow-hover">
-                        <i class="fab fa-discord"></i>
-                        <span class="lang-tr">Discord Topluluğuna Katıl</span>
-                        <span class="lang-en">Join Discord Community</span>
-                    </a>
-                    <a href="https://ayascell.com/ayas-discussions/" target="_blank" rel="noopener noreferrer" class="link-button outline glow-hover">
-                        <i class="fas fa-comments"></i>
-                        <span class="lang-tr">Ayas Discussions</span>
-                        <span class="lang-en">Ayas Discussions</span>
-                    </a>
-                </div>
             </div>
         </section>
 
@@ -365,4 +305,3 @@
 </body>
 
 </html>
-

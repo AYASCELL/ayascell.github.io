@@ -47,4 +47,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
+
+  <!-- 7. Contributors -->
+  <url>
+    <loc>https://ayascell.com/contributors.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
 </urlset>

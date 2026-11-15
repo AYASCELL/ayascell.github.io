@@ -4882,18 +4882,69 @@ body.show-en div.lang-en, body.show-en p.lang-en, body.show-en h1.lang-en, body.
 /* ==========================================================================
    CONTRIBUTORS PAGE STYLES (contributors.html — Ecosystem Card Grid Parity)
    ========================================================================== */
+.contrib-section {
+    margin-bottom: 50px;
+}
+
+.contrib-section-header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.contrib-section-title {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-size: 1.85em;
+    font-weight: 800;
+    margin-bottom: 10px;
+    letter-spacing: -0.02em;
+}
+
+.contrib-section-icon {
+    font-size: 0.85em;
+    color: var(--primary-gold, #D4AF37);
+    filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.35));
+}
+
+.contrib-community-section .contrib-section-icon {
+    color: #00D8FF;
+    filter: drop-shadow(0 0 10px rgba(0, 216, 255, 0.35));
+}
+
+.contrib-section-desc {
+    max-width: 680px;
+    margin: 0 auto;
+    font-size: 0.98em;
+    line-height: 1.6;
+    color: rgba(240, 240, 240, 0.72);
+}
+
+.contrib-section-divider {
+    height: 1px;
+    max-width: 920px;
+    margin: 55px auto;
+    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.35), rgba(0, 216, 255, 0.25), transparent);
+    border: none;
+}
+
 .contrib-showcase-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 25px;
-    margin-top: 30px;
+    margin-top: 28px;
 }
 
 .contrib-card {
+    flex: 0 1 calc((100% - 50px) / 3);
+    min-width: 280px;
     padding: 30px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    text-align: left;
 }
 
 .contrib-card.emerald-accent {
@@ -5074,17 +5125,24 @@ body.show-en div.lang-en, body.show-en p.lang-en, body.show-en h1.lang-en, body.
 }
 
 @media (max-width: 1024px) {
-    .contrib-showcase-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+    .contrib-card {
+        flex: 0 1 calc((100% - 25px) / 2);
+        min-width: 260px;
     }
 }
 
 @media (max-width: 640px) {
-    .contrib-showcase-grid {
-        grid-template-columns: 1fr;
+    .contrib-section-title {
+        font-size: 1.5em;
+    }
+
+    .contrib-section-divider {
+        margin: 40px auto;
     }
 
     .contrib-card {
+        flex: 1 1 100%;
+        min-width: 0;
         padding: 24px;
     }
 }

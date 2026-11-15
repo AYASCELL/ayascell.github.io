@@ -65,7 +65,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=20261115_2">
+    <link rel="stylesheet" href="style.css?v=20261115_3">
 </head>
 
 <body class="setup-page-body">
@@ -110,13 +110,27 @@
                 <span class="lang-en">Contributors</span>
             </h1>
             <p class="setup-main-desc">
-                <span class="lang-tr">AYASCELL ekosistemine, sunucu altyapımıza ve açık kaynak projelerimize destek veren dostlarımız ve geliştiriciler.</span>
-                <span class="lang-en">Community partners and developers supporting AYASCELL server infrastructure and open source projects.</span>
+                <span class="lang-tr">AYASCELL ekosistemine, sunucu altyapımıza ve açık kaynak projelerimize destek veren çözüm ortaklarımız ve topluluğumuz.</span>
+                <span class="lang-en">Infrastructure partners, supporters, and community members empowering the AYASCELL ecosystem.</span>
             </p>
         </header>
 
-        <!-- Çoklu Sütun Kart Izgarası (Oyunlar Sayfası Düzeni) -->
-        <section style="margin-bottom: 60px;">
+        <!-- 1. Bölüm: Altyapı & Çözüm Ortakları (Doğrudan Sağlayıcılar) -->
+        <section id="direct-providers" class="contrib-section">
+            <div class="contrib-section-header">
+                <h2 class="contrib-section-title">
+                    <i class="fas fa-server contrib-section-icon"></i>
+                    <span class="gradient-text glow-text">
+                        <span class="lang-tr">Altyapı &amp; Çözüm Ortakları</span>
+                        <span class="lang-en">Infrastructure &amp; Partners</span>
+                    </span>
+                </h2>
+                <p class="contrib-section-desc">
+                    <span class="lang-tr">Sunucu altyapımıza ve projelerimize doğrudan hizmet, bot veya teknik altyapı desteği sağlayan dostlarımız.</span>
+                    <span class="lang-en">Direct service and infrastructure partners providing bot hosting and technical support for our servers.</span>
+                </p>
+            </div>
+
             <div class="contrib-showcase-grid">
 
                 <!-- 1. Kolu Bot -->
@@ -159,7 +173,56 @@
                     </div>
                 </div>
 
-                <!-- 2. Kod & Proje Katkıları -->
+                <!--
+                YENİ DOĞRUDAN DESTEKÇİ / SAĞLAYICI KARTI ŞABLONU:
+                <div class="contrib-card glass-card premium-border hover-lift">
+                    <div>
+                        <div class="contrib-header">
+                            <span class="contrib-badge badge-gold">
+                                <i class="fas fa-code"></i>
+                                <span class="lang-tr">Katkı Alanı</span>
+                                <span class="lang-en">Role</span>
+                            </span>
+                            <img src="assets/avatar.png" alt="Logo" class="contrib-card-icon">
+                        </div>
+                        <h4>İsim / Proje</h4>
+                        <p>Kısa açıklama.</p>
+                        <div class="contrib-tags">
+                            <span class="contrib-tag">Etiket</span>
+                        </div>
+                    </div>
+                    <div class="contrib-links-row">
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="contrib-btn solid-gold">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+                -->
+
+            </div>
+        </section>
+
+        <hr class="contrib-section-divider">
+
+        <!-- 2. Bölüm: Topluluğumuz (Açık Kaynak & Test Katılımı) -->
+        <section id="community" class="contrib-section contrib-community-section" style="margin-bottom: 60px;">
+            <div class="contrib-section-header">
+                <h2 class="contrib-section-title">
+                    <i class="fas fa-users contrib-section-icon"></i>
+                    <span class="gradient-text glow-text">
+                        <span class="lang-tr">Topluluğumuz</span>
+                        <span class="lang-en">Our Community</span>
+                    </span>
+                </h2>
+                <p class="contrib-section-desc">
+                    <span class="lang-tr">Doğrudan sağlayıcıların yanında; açık kaynak kod katkıları, kapalı beta testleri, çeviriler ve geri bildirimlerle AYASCELL projelerini büyüten topluluk alanlarımız.</span>
+                    <span class="lang-en">Alongside direct providers, our community hubs where members help grow AYASCELL projects through open-source code, closed beta testing, translations, and feedback.</span>
+                </p>
+            </div>
+
+            <div class="contrib-showcase-grid">
+
+                <!-- 1. Kod & Proje Katkıları -->
                 <div class="contrib-card glass-card premium-border hover-lift">
                     <div>
                         <div class="contrib-header">
@@ -196,7 +259,7 @@
                     </div>
                 </div>
 
-                <!-- 3. Beta Test & Topluluk Desteği -->
+                <!-- 2. Beta Test & Topluluk Desteği -->
                 <div class="contrib-card glass-card premium-border hover-lift">
                     <div>
                         <div class="contrib-header">
@@ -236,32 +299,6 @@
                         </a>
                     </div>
                 </div>
-
-                <!--
-                YENİ KATKIDA BULUNAN KARTI ŞABLONU:
-                <div class="contrib-card glass-card premium-border hover-lift">
-                    <div>
-                        <div class="contrib-header">
-                            <span class="contrib-badge badge-gold">
-                                <i class="fas fa-code"></i>
-                                <span class="lang-tr">Katkı Alanı</span>
-                                <span class="lang-en">Role</span>
-                            </span>
-                            <img src="assets/avatar.png" alt="Logo" class="contrib-card-icon">
-                        </div>
-                        <h4>İsim / Proje</h4>
-                        <p>Kısa açıklama.</p>
-                        <div class="contrib-tags">
-                            <span class="contrib-tag">Etiket</span>
-                        </div>
-                    </div>
-                    <div class="contrib-links-row">
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="contrib-btn solid-gold">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                    </div>
-                </div>
-                -->
 
             </div>
         </section>

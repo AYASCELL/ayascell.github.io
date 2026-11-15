@@ -4976,10 +4976,25 @@ body.show-en div.lang-en, body.show-en p.lang-en, body.show-en h1.lang-en, body.
     justify-content: center;
     font-size: 1.75em;
     color: var(--light-gold, #F6E05E);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
 }
 
-.contrib-card.emerald-accent .contrib-card-icon {
+.contrib-card-icon.frameless {
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 12px rgba(16, 185, 129, 0.35));
+}
+
+.contrib-card:hover .contrib-card-icon.frameless {
+    transform: scale(1.12);
+    box-shadow: none !important;
+    filter: drop-shadow(0 6px 18px rgba(16, 185, 129, 0.65));
+}
+
+.contrib-card.emerald-accent .contrib-card-icon:not(.frameless) {
     border-color: rgba(16, 185, 129, 0.4);
 }
 

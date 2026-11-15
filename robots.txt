@@ -3,26 +3,23 @@
 # Website: https://ayascell.com/
 # ==============================================================================
 
-# ------------------------------------------------------------------------------
-# 1. Global Crawler Policy
-# ------------------------------------------------------------------------------
 User-agent: *
 Allow: /
+Allow: /ecosystem/
+Allow: /AyasOS/
+Allow: /ayas-discussions/
+Allow: /assets/
+Allow: /ecosystem/assets/
 
-# Prevent indexing of technical, system, and raw developer files
+# Prevent indexing of verification and build scripts only
 Disallow: /google*.html
 Disallow: /CNAME
-Disallow: /*2-Photoroom*.png$
 Disallow: /*.sh$
-Disallow: /*.md$
-Disallow: /*.json$
 Disallow: /*.lock$
 Disallow: /*.bak$
 Disallow: /*.tmp$
 
-# ------------------------------------------------------------------------------
-# 2. Major Search Engine Web Crawlers
-# ------------------------------------------------------------------------------
+# Major Search Engine Crawlers
 User-agent: Googlebot
 User-agent: Googlebot-Image
 User-agent: Googlebot-Video
@@ -31,24 +28,9 @@ User-agent: Applebot
 User-agent: DuckDuckBot
 User-agent: YandexBot
 User-agent: Yandex
-User-agent: Baiduspider
-User-agent: NaverBot
-User-agent: SeznamBot
 Allow: /
-Disallow: /*2-Photoroom*.png$
-Allow: /*.css$
-Allow: /*.js$
-Allow: /*.png$
-Allow: /*.jpg$
-Allow: /*.jpeg$
-Allow: /*.svg$
-Allow: /*.webp$
-Allow: /*.ico$
-Allow: /assets/
 
-# ------------------------------------------------------------------------------
-# 3. AI & LLM Search Engine Crawlers (ChatGPT, Claude, Perplexity, Gemini)
-# ------------------------------------------------------------------------------
+# AI & Answer Engine Crawlers
 User-agent: GPTBot
 User-agent: ChatGPT-User
 User-agent: OAI-SearchBot
@@ -59,18 +41,14 @@ User-agent: PerplexityBot
 User-agent: Google-Extended
 Allow: /
 
-# ------------------------------------------------------------------------------
-# 4. Social Media & Rich Preview Crawlers
-# ------------------------------------------------------------------------------
+# Social Media & Rich Preview Crawlers
 User-agent: Twitterbot
 User-agent: facebookexternalhit
 User-agent: LinkedInBot
 User-agent: WhatsApp
 User-agent: TelegramBot
+User-agent: Discordbot
 Allow: /
-Allow: /assets/
 
-# ------------------------------------------------------------------------------
-# 5. XML Sitemap Index
-# ------------------------------------------------------------------------------
+# XML Sitemap
 Sitemap: https://ayascell.com/sitemap.xml

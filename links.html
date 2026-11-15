@@ -10,27 +10,35 @@
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
     <!-- Önbellek Engelleme / Anlık Güncelleme Sonu -->
-    <title>Linkler | AYASCELL</title>
+    <title>Tüm Resmi Bağlantılar &amp; Platformlar | AYASCELL</title>
     
     <link rel="canonical" href="https://ayascell.com/links.html">
-    <meta name="description" content="AYASCELL resmi bağlantıları ve sosyal medya hesapları.">
+    <link rel="alternate" hreflang="tr" href="https://ayascell.com/links.html">
+    <link rel="alternate" hreflang="en" href="https://ayascell.com/links.html">
+    <link rel="alternate" hreflang="x-default" href="https://ayascell.com/links.html">
+    <meta name="description" content="AYASCELL resmi bağlantıları: Ayascell Ecosystem, AyasProg, AyasTools, Ayas OS, Google Play uygulamaları, GitHub, LinkedIn, YouTube, Discord ve tüm sosyal medya hesapları.">
+    <meta name="keywords" content="AYASCELL Linkler, AyasProg, AyasTools, Ayascell Ecosystem, Ayas OS, Google Play AYASCELL, GitHub AYASCELL, LinkedIn AYASCELL, Discord">
     <meta name="author" content="AYASCELL">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="AYASCELL">
     <meta property="og:url" content="https://ayascell.com/links.html">
-    <meta property="og:title" content="Linkler | AYASCELL">
-    <meta property="og:description" content="AYASCELL projeleri, sosyal medya hesapları ve ekosistem bağlantıları.">
+    <meta property="og:title" content="Tüm Resmi Bağlantılar &amp; Platformlar | AYASCELL">
+    <meta property="og:description" content="AYASCELL projeleri, AyasProg, AyasTools, Ayas OS, Google Play oyunları ve resmi sosyal medya hesapları.">
     <meta property="og:image" content="https://ayascell.com/assets/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="tr_TR">
+    <meta property="og:locale:alternate" content="en_US">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Linkler | AYASCELL">
-    <meta name="twitter:description" content="AYASCELL projeleri, sosyal medya hesapları ve ekosistem bağlantıları.">
+    <meta name="twitter:title" content="Tüm Resmi Bağlantılar &amp; Platformlar | AYASCELL">
+    <meta name="twitter:description" content="AYASCELL projeleri, AyasProg, AyasTools, Ayas OS, Google Play oyunları ve resmi sosyal medya hesapları.">
     <meta name="twitter:image" content="https://ayascell.com/assets/og-image.png">
 
     <!-- Favicon -->
@@ -42,21 +50,58 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "ProfilePage",
-      "name": "AYASCELL Bağlantıları",
-      "url": "https://ayascell.com/links.html",
-      "image": "https://ayascell.com/assets/ayascell-logo-dark.png",
-      "mainEntity": {
-        "@type": "Person",
-        "name": "AYASCELL",
-        "url": "https://ayascell.com/"
-      }
+      "@graph": [
+        {
+          "@type": "ProfilePage",
+          "@id": "https://ayascell.com/links.html#profilepage",
+          "name": "AYASCELL Resmi Bağlantıları ve Platformları",
+          "url": "https://ayascell.com/links.html",
+          "image": "https://ayascell.com/assets/ayascell-logo-dark.png",
+          "isPartOf": {
+            "@id": "https://ayascell.com/#website"
+          },
+          "mainEntity": {
+            "@type": "Organization",
+            "@id": "https://ayascell.com/#organization",
+            "name": "AYASCELL",
+            "url": "https://ayascell.com/",
+            "sameAs": [
+              "https://ayascell.com/ecosystem/",
+              "https://ayasprog.ayascell.com/",
+              "https://ayastools.ayascell.com/",
+              "https://ayascell.com/AyasOS/",
+              "https://ayascell.com/ayas-discussions/",
+              "https://github.com/AYASCELL",
+              "https://www.linkedin.com/company/ayascell",
+              "https://www.youtube.com/channel/UCInPupaLoQw-3z29fCrZPmg",
+              "https://twitch.tv/ayascellgamingtr"
+            ]
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "AYASCELL",
+              "item": "https://ayascell.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Tüm Linkler",
+              "item": "https://ayascell.com/links.html"
+            }
+          ]
+        }
+      ]
     }
     </script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=20261115_170758">
     <style>
         .link-category {
             font-size: 1.1em;
@@ -320,7 +365,7 @@
         </div>
     </div>
 
-    <script src="app.js"></script>
+    <script src="app.js?v=20261115_170758"></script>
 </body>
 
 </html>

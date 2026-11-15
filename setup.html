@@ -14,29 +14,35 @@
 
     <!-- SEO & Canonical -->
     <link rel="canonical" href="https://ayascell.com/setup.html">
+    <link rel="alternate" hreflang="tr" href="https://ayascell.com/setup.html">
+    <link rel="alternate" hreflang="en" href="https://ayascell.com/setup.html">
+    <link rel="alternate" hreflang="x-default" href="https://ayascell.com/setup.html">
     <meta name="description"
-        content="AYASCELL Çalışma Ortamı & Donanım - Dell G15 5530 (i7-13650HX, RTX 4060, 16GB DDR5, 2.5TB Kioxia SSD), Arch Linux ve Windows 11 Pro çoklu işletim sistemi altyapısı.">
+        content="AYASCELL Çalışma Ortamı &amp; Donanım — Dell G15 5530 (Intel Core i7-13650HX, RTX 4060 8GB, 16GB DDR5, 2.5TB NVMe SSD), Arch Linux ve Windows 11 Pro çoklu işletim sistemi altyapısı.">
     <meta name="keywords"
         content="AYASCELL, Donanım, Setup, Çalışma Ortamı, Dell G15 5530, RTX 4060, Arch Linux, Windows 11 Pro, Hardware Specs, Linux Developer Setup">
     <meta name="author" content="AYASCELL">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 
     <!-- Open Graph / Sosyal Medya -->
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="AYASCELL">
     <meta property="og:url" content="https://ayascell.com/setup.html">
-    <meta property="og:title" content="Çalışma Ortamım & Donanım | AYASCELL">
+    <meta property="og:title" content="Çalışma Ortamım &amp; Donanım | AYASCELL">
     <meta property="og:description"
         content="Projelerimi hayata geçirirken kullandığım bilgisayarım, donanım mimarim ve çoklu işletim sistemleri altyapım.">
     <meta property="og:image" content="https://ayascell.com/assets/setup.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:locale" content="tr_TR">
+    <meta property="og:locale:alternate" content="en_US">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://ayascell.com/setup.html">
-    <meta name="twitter:title" content="Çalışma Ortamım & Donanım | AYASCELL">
+    <meta name="twitter:title" content="Çalışma Ortamım &amp; Donanım | AYASCELL">
     <meta name="twitter:description"
         content="Projelerimi hayata geçirirken kullandığım bilgisayarım, donanım mimarim ve çoklu işletim sistemleri altyapım.">
     <meta name="twitter:image" content="https://ayascell.com/assets/setup.png">
@@ -46,25 +52,52 @@
     <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
 
-    <!-- Structured Data (Schema.org JSON-LD - TechArticle) -->
+    <!-- Structured Data (Schema.org JSON-LD - TechArticle & BreadcrumbList) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "TechArticle",
-      "headline": "AYASCELL Çalışma Ortamım ve Donanım Mimarisi",
-      "url": "https://ayascell.com/setup.html",
-      "image": "https://ayascell.com/assets/setup.png",
-      "author": {
-        "@type": "Person",
-        "name": "AYASCELL",
-        "url": "https://ayascell.com/"
-      },
-      "publisher": {
-        "@type": "Person",
-        "name": "AYASCELL",
-        "url": "https://ayascell.com/"
-      },
-      "description": "AYASCELL geliştirme ortamı, Dell G15 5530 donanımı, Arch Linux ve Windows 11 Pro işletim sistemleri detaylı dökümü."
+      "@graph": [
+        {
+          "@type": "TechArticle",
+          "@id": "https://ayascell.com/setup.html#article",
+          "headline": "AYASCELL Çalışma Ortamım ve Donanım Mimarisi",
+          "url": "https://ayascell.com/setup.html",
+          "image": "https://ayascell.com/assets/setup.png",
+          "author": {
+            "@type": "Person",
+            "@id": "https://ayascell.com/#person",
+            "name": "AYASCELL",
+            "url": "https://ayascell.com/"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "@id": "https://ayascell.com/#organization",
+            "name": "AYASCELL",
+            "url": "https://ayascell.com/"
+          },
+          "isPartOf": {
+            "@id": "https://ayascell.com/#website"
+          },
+          "description": "AYASCELL geliştirme ortamı, Dell G15 5530 donanımı, Arch Linux ve Windows 11 Pro işletim sistemleri detaylı dökümü."
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "AYASCELL",
+              "item": "https://ayascell.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Çalışma Ortamım & Donanım",
+              "item": "https://ayascell.com/setup.html"
+            }
+          ]
+        }
+      ]
     }
     </script>
 
@@ -74,7 +107,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=20261115_170758">
 </head>
 
 <body class="setup-page-body">
@@ -596,7 +629,7 @@
         </div>
     </div>
 
-    <script src="app.js"></script>
+    <script src="app.js?v=20261115_170758"></script>
 </body>
 
 </html>

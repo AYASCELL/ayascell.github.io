@@ -27,68 +27,13 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://ayascell.com/ecosystem/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://ayascell.com/ecosystem/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ayascell.com/ecosystem/" />
-  </url>
-
-  <!-- 3. Ecosystem - Web Platforms (AyasTools & AyasProg) -->
-  <url>
-    <loc>https://ayascell.com/ecosystem/web.html</loc>
-    <lastmod>2026-11-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://ayascell.com/ecosystem/web.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://ayascell.com/ecosystem/web.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ayascell.com/ecosystem/web.html" />
-  </url>
-
-  <!-- 4. Ecosystem - PC & System Tools -->
-  <url>
-    <loc>https://ayascell.com/ecosystem/pc.html</loc>
-    <lastmod>2026-11-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://ayascell.com/ecosystem/pc.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://ayascell.com/ecosystem/pc.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ayascell.com/ecosystem/pc.html" />
-  </url>
-
-  <!-- 5. Ecosystem - Mobile Applications (Muslim: Ezan Vakti & Kuran) -->
-  <url>
-    <loc>https://ayascell.com/ecosystem/mobile.html</loc>
-    <lastmod>2026-11-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://ayascell.com/ecosystem/mobile.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://ayascell.com/ecosystem/mobile.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ayascell.com/ecosystem/mobile.html" />
     <image:image>
-      <image:loc>https://ayascell.com/ecosystem/assets/ezan-vakti.png</image:loc>
-      <image:title>Muslim: Ezan Vakti &amp; Kuran</image:title>
+      <image:loc>https://ayascell.com/assets/ayascell-logo-dark.png</image:loc>
+      <image:title>AYASCELL Ecosystem</image:title>
     </image:image>
   </url>
 
-  <!-- 6. Ecosystem - Games & Entertainment -->
-  <url>
-    <loc>https://ayascell.com/ecosystem/games.html</loc>
-    <lastmod>2026-11-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://ayascell.com/ecosystem/games.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://ayascell.com/ecosystem/games.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ayascell.com/ecosystem/games.html" />
-  </url>
-
-  <!-- 7. Ecosystem - Closed Beta Guide -->
-  <url>
-    <loc>https://ayascell.com/ecosystem/closed-beta-guide.html</loc>
-    <lastmod>2026-11-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://ayascell.com/ecosystem/closed-beta-guide.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://ayascell.com/ecosystem/closed-beta-guide.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ayascell.com/ecosystem/closed-beta-guide.html" />
-  </url>
-
-  <!-- 8. Ayas OS Official Portal -->
+  <!-- 3. Ayas OS Official Portal -->
   <url>
     <loc>https://ayascell.com/AyasOS/</loc>
     <lastmod>2026-11-15</lastmod>
@@ -97,9 +42,13 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://ayascell.com/AyasOS/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://ayascell.com/AyasOS/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ayascell.com/AyasOS/" />
+    <image:image>
+      <image:loc>https://ayascell.com/assets/ayascell-logo-dark.png</image:loc>
+      <image:title>Ayas OS | AYASCELL</image:title>
+    </image:image>
   </url>
 
-  <!-- 9. Community & Discussions Portal -->
+  <!-- 4. Community & Discussions Portal -->
   <url>
     <loc>https://ayascell.com/ayas-discussions/</loc>
     <lastmod>2026-11-15</lastmod>
@@ -108,9 +57,13 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://ayascell.com/ayas-discussions/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://ayascell.com/ayas-discussions/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ayascell.com/ayas-discussions/" />
+    <image:image>
+      <image:loc>https://ayascell.com/assets/ayascell-logo-dark.png</image:loc>
+      <image:title>AYASCELL Topluluk &amp; Discussions</image:title>
+    </image:image>
   </url>
 
-  <!-- 10. Workspace & Hardware Setup -->
+  <!-- 5. Workspace & Hardware Setup -->
   <url>
     <loc>https://ayascell.com/setup.html</loc>
     <lastmod>2026-11-15</lastmod>
@@ -119,9 +72,13 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://ayascell.com/setup.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://ayascell.com/setup.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ayascell.com/setup.html" />
+    <image:image>
+      <image:loc>https://ayascell.com/assets/ayascell-logo-dark.png</image:loc>
+      <image:title>Çalışma Ortamım &amp; Donanım | AYASCELL</image:title>
+    </image:image>
   </url>
 
-  <!-- 11. Contributors & Partners -->
+  <!-- 6. Contributors & Partners -->
   <url>
     <loc>https://ayascell.com/contributors.html</loc>
     <lastmod>2026-11-15</lastmod>
@@ -130,9 +87,13 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://ayascell.com/contributors.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://ayascell.com/contributors.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ayascell.com/contributors.html" />
+    <image:image>
+      <image:loc>https://ayascell.com/assets/ayascell-logo-dark.png</image:loc>
+      <image:title>Katkıda Bulunanlar &amp; Çözüm Ortakları | AYASCELL</image:title>
+    </image:image>
   </url>
 
-  <!-- 12. Official Links Hub -->
+  <!-- 7. Official Links Hub -->
   <url>
     <loc>https://ayascell.com/links.html</loc>
     <lastmod>2026-11-15</lastmod>
@@ -141,6 +102,10 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://ayascell.com/links.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://ayascell.com/links.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ayascell.com/links.html" />
+    <image:image>
+      <image:loc>https://ayascell.com/assets/ayascell-logo-dark.png</image:loc>
+      <image:title>Tüm Resmi Bağlantılar &amp; Platformlar | AYASCELL</image:title>
+    </image:image>
   </url>
 
 </urlset>

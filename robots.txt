@@ -10,8 +10,11 @@ Allow: /AyasOS/
 Allow: /ayas-discussions/
 Allow: /assets/
 Allow: /ecosystem/assets/
+Allow: /assets/ayascell-logo-dark.png
+Allow: /assets/og-image.png
 
-# Prevent indexing of verification and build scripts only
+# Prevent indexing of transparent logo thumbnails, verification and build scripts
+Disallow: /*2-Photoroom*.png$
 Disallow: /google*.html
 Disallow: /CNAME
 Disallow: /*.sh$
@@ -29,6 +32,9 @@ User-agent: DuckDuckBot
 User-agent: YandexBot
 User-agent: Yandex
 Allow: /
+Allow: /assets/ayascell-logo-dark.png
+Allow: /assets/og-image.png
+Disallow: /*2-Photoroom*.png$
 
 # AI & Answer Engine Crawlers
 User-agent: GPTBot

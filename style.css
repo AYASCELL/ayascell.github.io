@@ -316,10 +316,22 @@ body {
 
 .hero-buttons {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 50px;
+}
+
+.hero-buttons-primary {
+    display: flex;
     justify-content: center;
     gap: 20px;
-    margin-bottom: 50px;
     flex-wrap: wrap;
+}
+
+.hero-buttons-secondary {
+    display: flex;
+    justify-content: center;
 }
 
 .link-button {
@@ -1201,6 +1213,26 @@ body {
 
     .hero-buttons {
         flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero-buttons-primary {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .hero-buttons-secondary {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .hero-buttons-primary .link-button,
+    .hero-buttons-secondary .link-button {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
     }
 
     .projects-grid {
